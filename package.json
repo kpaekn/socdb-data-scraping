@@ -1,6 +1,5 @@
 {
   "dependencies": {
-    "image-size": "^1.1.1",
     "jimp": "^1.2.0",
     "png-js": "^1.0.0",
     "sharp": "^0.33.5",

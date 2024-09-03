@@ -1,0 +1,7 @@
+node_modules
+tmp
+.DS_Store
+*.traineddata
+package-lock.json
+out
+in

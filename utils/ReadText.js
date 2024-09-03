@@ -1,7 +1,12 @@
+const fs = require('fs');
 const { Jimp } = require('jimp');
 const { createWorker } = require('tesseract.js');
 
 module.exports.readText = async (file, deNoise) => {
+  if (!fs.existsSync(file)) {
+    return '';
+  }
+  
   var actualFile = file
   if (deNoise) {
     var jimpFile = file + '.jimp.png';

@@ -3,19 +3,29 @@ const { Jimp } = require('jimp');
 const { createSlices } = require('./utils/CreateSlices');
 const { readText } = require('./utils/ReadText');
 
-if (!fs.existsSync('out/images')) {
-  fs.mkdirSync('out/images', { recursive: true });
+if (!fs.existsSync('out/skill')) {
+  fs.mkdirSync('out/skill', { recursive: true });
+}
+if (!fs.existsSync('out/range')) {
+  fs.mkdirSync('out/range', { recursive: true });
 }
 
+// start(1, `in/battle/burning.png`).then(console.log);
+// start(2, `in/tree/knockback.png`).then(console.log);
+// start(3, `in/trait/Screenshot_20240903-090639.png`).then(console.log);
 
-// start(1, `ss/come-on.png`).then(console.log);
-// start(2, `ss2/justice.png`).then(console.log);
+// doBatch();
 
-// batch(1, 'ss');
-batch(2, 'ss2');
+async function doBatch() {
+  const results = [];
+  results.push(...(await batch(1, 'in/battle')));
+  results.push(...(await batch(2, 'in/tree')));
+  results.push(...(await batch(3, 'in/trait')));
+  fs.writeFileSync(`out/result.json`, JSON.stringify(results, null, 2));
+}
 
 async function batch(typ, dir) {
-  const files = fs.readdirSync(dir);
+  const files = fs.readdirSync(dir).filter(fileName => fileName !== '.DS_Store');
   const results = [];
   const finalPromise = files.reduce((p, fileName) => {
     return p.then(() => {
@@ -25,8 +35,8 @@ async function batch(typ, dir) {
     });
   }, Promise.resolve());
 
-  finalPromise.then(() => {
-    fs.writeFileSync(`out/${dir}-result.json`, JSON.stringify(results, null, 2));
+  return finalPromise.then(() => {
+    return results;
   });
 }
 
@@ -34,96 +44,90 @@ async function start(typ, file) {
   console.log(file);
   const id = Date.now();
   await createSlices(typ, file, `tmp/${id}`);
+
   return Promise.all([
-    Promise.all([
-      readText(`tmp/${id}/name.png`).then(trim),
-      readText(`tmp/${id}/desc.png`, true).then(trim).then(replaceNewLine).then(fixBuffs),
-      readText(`tmp/${id}/desc-full.png`, true).then(trim).then(replaceNewLine).then(fixBuffs),
-      readText(`tmp/${id}/typ.png`).then(trim).then(fixType),
-      readText(`tmp/${id}/range-tags-half.png`, true).then(parseRangeTags),
-    ]).then(values => {
-      console.log(values[0]);
-      var desc = values[1];
-      if (getRangeTags(values[4]).length === 0) {
-        desc = values[2];
-      }
-      return {
-        name: values[0],
-        desc,
-        type: values[3]
-      };
-    }),
-    Promise.all([
-      readText(`tmp/${id}/tag1.png`).then(getTagType),
-      readText(`tmp/${id}/tag2.png`).then(getTagType),
-      // readText(`tmp/${id}/tag1.png`),
-      // readText(`tmp/${id}/tag2.png`),
-    ]).then(values => {
-      let info = {};
-      // info.tag1 = values[2];
-      // info.tag2 = values[3];
-      if (values[0]) {
-        info[values[0].name] = values[0].value;
-      }
-      if (values[1]) {
-        info[values[1].name] = values[1].value;
-      }
-      return info;
-    }),
-    Promise.all([
-      readText(`tmp/${id}/range-tags.png`, true).then(parseRangeTags),
-      readText(`tmp/${id}/range-tags-half.png`, true).then(parseRangeTags),
+    readText(`tmp/${id}/name.png`).then(trim),
+    readText(`tmp/${id}/desc.png`, true).then(trim).then(replaceNewLine).then(fixBuffs),
+    readText(`tmp/${id}/desc-full.png`, true).then(trim).then(replaceNewLine).then(fixBuffs),
+    readText(`tmp/${id}/typ.png`).then(trim).then(fixType),
+    readText(`tmp/${id}/cost-1.png`).then(trim).then(getCostOrCD),
+    readText(`tmp/${id}/cost-2.png`).then(trim).then(getCostOrCD),
+    readText(`tmp/${id}/range-tag-1.png`).then(parseRangeTags),
+    readText(`tmp/${id}/range-tag-2.png`).then(parseRangeTags),
+    readText(`tmp/${id}/range-1-label.png`).then(trim),
+    readText(`tmp/${id}/range-1-value.png`).then(trim).then(formatRange),
+    readText(`tmp/${id}/range-2-label.png`).then(trim),
+    readText(`tmp/${id}/range-2-value.png`).then(trim).then(formatRange),
+    readText(`tmp/${id}/range-3-label.png`).then(trim),
+    readText(`tmp/${id}/range-3-value.png`).then(trim).then(formatRange),
+  ]).then(values => {
+    const name = values[0];
+    const desc = values[1];
+    const descFull = values[2];
+    const typ = values[3];
+    const cost1 = values[4];
+    const cost2 = values[5];
+    const rangeTag1 = values[6];
+    const rangeTag2 = values[7];
+    const rangeLabel1 = values[8];
+    const rangeValue1 = values[9];
+    const rangeLabel2 = values[10];
+    const rangeValue2 = values[11];
+    const rangeLabel3 = values[12];
+    const rangeValue3 = values[13];
 
-      readText(`tmp/${id}/range-1-label.png`).then(trim),
-      readText(`tmp/${id}/range-1-value-all.png`).then(trim).then(formatRange),
+    const result = {
+      name,
+      type: typ,
+    };
 
-      readText(`tmp/${id}/range-2-label.png`).then(trim),
-      readText(`tmp/${id}/range-2-value-all.png`).then(trim).then(formatRange),
+    const rangeTags = rangeTag1.concat(rangeTag2);
+    if (typ === 'Trait') {
+      result.desc = desc;
+    } else if (rangeTags.length > 0) {
+      result.desc = desc;
+    } else {
+      result.desc = descFull;
+    }
+    if (rangeTags.length > 0) {
+      result.desc = desc;
+    }
 
-      readText(`tmp/${id}/range-3-label.png`).then(trim),
-      readText(`tmp/${id}/range-3-value-all.png`).then(trim).then(formatRange),
-    ]).then(values => {
-      let range = { rangeInfo: {} };
-      range.rangeTags = getRangeTags(values[1], values[0]);
-      // range.rangeTagsRaw = getRangeTagsRaw(values[1], values[0]);
-      const rangeTypes = []
-      rangeTypes.push({ label: values[2], range: values[3] });
-      rangeTypes.push({ label: values[4], range: values[5] });
-      rangeTypes.push({ label: values[6], range: values[7] });
-      rangeTypes.forEach((info) => {
-        if (info.label === 'Range' || info.label === 'Height Range' || info.label === 'Effect Height') {
-          range.rangeInfo[info.label] = {
-            low: info.range[0],
-            high: info.range[1]
-          };
-        }
-      });
-      return range;
-    }),
-  ]).then(objects => {
-    var result = {};
-    objects.forEach(obj => {
-      for (const key in obj) {
-        result[key] = obj[key];
+    if (cost1) {
+      result[cost1.name] = cost1.value;
+    }
+    if (cost2) {
+      result[cost2.name] = cost2.value;
+    }
+
+    const ranges = [
+      {label: rangeLabel1, value: rangeValue1},
+      {label: rangeLabel2, value: rangeValue2},
+      {label: rangeLabel3, value: rangeValue3},
+    ];
+    ranges.forEach(range => {
+      if (range.label === 'Range' || range.label === 'Height Range' || range.label === 'Effect Height') {
+        if (!result.rangeInfo) result.rangeInfo = {};
+        result.rangeInfo[range.label] = range.value;
       }
     });
 
-    if (result.range || result.rangeTags.length > 0 || Object.keys(result.rangeInfo).length > 0) {
+    if (rangeTags.length > 0 || result.rangeInfo) {
       var nameParts = [];
-      if (result.range) {
-        nameParts.push(result.range.join('-'));
-      }
-      result.rangeTags.forEach(tag => {
+      rangeTags.forEach(tag => {
         nameParts.push(tag.toLowerCase());
       });
       for (const name in result.rangeInfo) {
         nameParts.push(name.split(/\s+/).map(word => word[0].toLowerCase()).join(''));
-        nameParts.push(result.rangeInfo[name].low);
-        nameParts.push(result.rangeInfo[name].high);
+        nameParts.push(result.rangeInfo[name][0]);
+        nameParts.push(result.rangeInfo[name][1]);
       }
       result.rangeImage = nameParts.join('-');
-      fs.copyFileSync(`tmp/${id}/range-image.png`, `out/images/${result.rangeImage}.png`);
+      fs.copyFileSync(`tmp/${id}/range-image.png`, `out/range/${result.rangeImage}.png`);
     }
+
+    fs.copyFileSync(`tmp/${id}/icon.png`, `out/skill/${slug(name)}.png`);
+
     return result;
   });
 }
@@ -132,22 +136,33 @@ function trim(str) {
   return str.trim();
 }
 
+function slug(str) {
+  return str.toLowerCase().replaceAll(/['"!\(\),]/g, '').replaceAll(/[\s-]+/g, '-');
+}
+
 function replaceNewLine(str) {
   return str
     .replaceAll('-\n', '-')
     .replaceAll('\n', ' ');
 }
 
-function getTagType(str) {
-  if (str.indexOf('+') !== -1 || str.indexOf('(4)') !== -1) {
+function getCostOrCD(str) {
+  str = str.trim();
+  const value = Number(str[0]);
+  if (isNaN(value)) {
+    return null;
+  }
+
+  const label = str.slice(1);
+  if (label.indexOf('+') !== -1 || label.indexOf('4') !== -1) {
     return {
       name: 'cost',
-      value: Number(str[0])
+      value
     };
-  } else if (str.indexOf('x') !== -1 || str.indexOf('X') !== -1) {
+  } else if (label.indexOf('x') !== -1 || label.indexOf('X') !== -1) {
     return {
-      name: 'cd',
-      value: Number(str[0])
+      name: 'cooldown',
+      value
     };
   } else {
     return null;
@@ -157,53 +172,19 @@ function getTagType(str) {
 function parseRangeTags(str) {
   const allowed = ['AoE', 'Unit', 'Melee', 'Ground', 'Ranged'];
   const good = [];
-  const bad = [];
   str.split(/\s+/).forEach(tag => {
     if (allowed.includes(tag)) {
       good.push(tag);
-    } else {
-      bad.push(tag)
     }
   });
-  return [good, bad];
-}
-
-function getRangeTags(a, b) {
-  var tags = [];
-  if (a) {
-    tags.push(...a[0])
-  }
-  if (b) {
-    tags.push(...b[0])
-  }
-  return removeDuplicates(tags);
-}
-
-function getRangeTagsRaw(a, b) {
-  return [].concat(...a[0]).concat(...a[1]).concat(...b[0]).concat(...b[1])
-}
-
-function removeDuplicates(arr) {
-  var obj = {};
-  arr.forEach(item => {
-    obj[item] = true;
-  });
-  return Object.keys(obj);
-}
-
-function rangeCorrection(str) {
-  if (!str) {
-    return null;
-  }
-  if (str === 'IA') {
-    return 4;
-  }
-  return Number(str);
+  return good;
 }
 
 function formatRange(str) {
+  // split on the hiphen
   if (str.indexOf('-') !== -1) {
     return str.split(/\s*-\s*/).map(value => {
+      // try to remove the up/down arrow in front the the number
       return value
         .replace(/1(\d+)/, '$1')
         .replace(/t(\d+)/, '$1')

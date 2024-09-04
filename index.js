@@ -1,7 +1,7 @@
 const fs = require('fs');
-const { Jimp } = require('jimp');
 const { createSlices } = require('./utils/CreateSlices');
 const { readText } = require('./utils/ReadText');
+const webp = require('webp-converter');
 
 if (!fs.existsSync('out/skill')) {
   fs.mkdirSync('out/skill', { recursive: true });
@@ -10,18 +10,18 @@ if (!fs.existsSync('out/range')) {
   fs.mkdirSync('out/range', { recursive: true });
 }
 
-// start(1, `in/battle/burning.png`).then(console.log);
+// start(1, `in/battle/Screenshot_20240903-165456.png`).then(console.log);
 // start(2, `in/tree/knockback.png`).then(console.log);
 // start(3, `in/trait/Screenshot_20240903-090639.png`).then(console.log);
 
-// doBatch();
+doBatch();
 
 async function doBatch() {
   const results = [];
   results.push(...(await batch(1, 'in/battle')));
   results.push(...(await batch(2, 'in/tree')));
   results.push(...(await batch(3, 'in/trait')));
-  fs.writeFileSync(`out/result.json`, JSON.stringify(results, null, 2));
+  fs.writeFileSync(`result/result.json`, JSON.stringify(results, null, 2));
 }
 
 async function batch(typ, dir) {
@@ -60,7 +60,7 @@ async function start(typ, file) {
     readText(`tmp/${id}/range-2-value.png`).then(trim).then(formatRange),
     readText(`tmp/${id}/range-3-label.png`).then(trim),
     readText(`tmp/${id}/range-3-value.png`).then(trim).then(formatRange),
-  ]).then(values => {
+  ]).then(async (values) => {
     const name = values[0];
     const desc = values[1];
     const descFull = values[2];
@@ -101,9 +101,9 @@ async function start(typ, file) {
     }
 
     const ranges = [
-      {label: rangeLabel1, value: rangeValue1},
-      {label: rangeLabel2, value: rangeValue2},
-      {label: rangeLabel3, value: rangeValue3},
+      { label: rangeLabel1, value: rangeValue1 },
+      { label: rangeLabel2, value: rangeValue2 },
+      { label: rangeLabel3, value: rangeValue3 },
     ];
     ranges.forEach(range => {
       if (range.label === 'Range' || range.label === 'Height Range' || range.label === 'Effect Height') {
@@ -123,10 +123,10 @@ async function start(typ, file) {
         nameParts.push(result.rangeInfo[name][1]);
       }
       result.rangeImage = nameParts.join('-');
-      fs.copyFileSync(`tmp/${id}/range-image.png`, `out/range/${result.rangeImage}.png`);
+      await copyAndConvert(`tmp/${id}/range-image.png`, `out/range/${result.rangeImage}.webp`)
     }
 
-    fs.copyFileSync(`tmp/${id}/icon.png`, `out/skill/${slug(name)}.png`);
+    await copyAndConvert(`tmp/${id}/icon.png`, `out/skill/${slug(name)}.webp`)
 
     return result;
   });
@@ -219,4 +219,8 @@ function fixBuffs(str) {
 
     .replaceAll('forall', 'for all')
     .replaceAll('DMGand', 'DMG and')
+}
+
+async function copyAndConvert(src, dest) {
+  return webp.cwebp(src, dest, '-q 80', logging = '-v');
 }

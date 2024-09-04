@@ -90,7 +90,7 @@ async function start(typ, file) {
       result.desc = descFull;
     }
     if (rangeTags.length > 0) {
-      result.desc = desc;
+      result.rangeTags = rangeTags;
     }
 
     if (cost1) {

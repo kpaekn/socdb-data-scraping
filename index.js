@@ -11,7 +11,7 @@ if (!fs.existsSync('out/range')) {
 }
 
 // start(1, `in/battle/Screenshot_20240903-165456.png`).then(console.log);
-// start(2, `in/tree/knockback.png`).then(console.log);
+// start(2, `in/tree/Screenshot_20240903-195813.png`).then(console.log);
 // start(3, `in/trait/Screenshot_20240903-090639.png`).then(console.log);
 
 doBatch();
@@ -93,6 +93,13 @@ async function start(typ, file) {
       result.rangeTags = rangeTags;
     }
 
+    if (typ === 'Basic Attack') {
+      const t = getBasicAttackType(result.desc, rangeTags);
+      if (t) {
+        result.name += ' (' + t + ')';
+      }
+    }
+
     if (cost1) {
       result[cost1.name] = cost1.value;
     }
@@ -144,6 +151,20 @@ function replaceNewLine(str) {
   return str
     .replaceAll('-\n', '-')
     .replaceAll('\n', ' ');
+}
+
+function getBasicAttackType(desc, rangeTags) {
+  if (desc.indexOf('magic') !== -1) {
+    return 'Magic';
+  } else if (desc.indexOf('Curved') !== -1) {
+    return 'Curved';
+  }
+  if (rangeTags.indexOf('Melee') !== -1) {
+    return 'Melee';
+  } else if (rangeTags.indexOf('Ranged') !== -1) {
+    return 'Ranged';
+  }
+  return null;
 }
 
 function getCostOrCD(str) {

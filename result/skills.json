@@ -25,6 +25,16 @@
     "rangeImage": "ground-r-0-2-hr-8-8-eh-2-2"
   },
   {
+    "name": "Aim",
+    "type": "Skill",
+    "desc": "(Support) [Instant] Gains [{+}Crit II] and (Ignore Dodge] for 1 turn.",
+    "rangeTags": [
+      "Unit"
+    ],
+    "cooldown": 2,
+    "rangeImage": "unit"
+  },
+  {
     "name": "Air Raid",
     "type": "Trait",
     "desc": "Gains [Jump] and [Climb]. Before attacking, if the starting [tile] and target [tile] have a height difference of more than 2, Crit increases by an additional 30%."
@@ -59,6 +69,11 @@
     "desc": "(Passive) When performing an active attack, if the target is [Unharmed], deals 20% Physical DMG. When performing a [back attack] on [unharmed] targets, additionally inflicts [{x}Passive Skills] for 1 turn."
   },
   {
+    "name": "Anesthetic",
+    "type": "Skill",
+    "desc": "(Passive) After attacking, inflicts 1 stack of [Infection] on the target. When actively using [class skill] to hit targets with 5 or more stacks of [Infection], inflicts [Sleep] after attacking. The effect lasts for 1 turn."
+  },
+  {
     "name": "Arm Bracers",
     "type": "Skill",
     "desc": "(Passive) When attacked from the [Side], increases DEF by 30%."
@@ -84,6 +99,26 @@
       ]
     },
     "rangeImage": "ranged-unit-r-1-3-hr-8-6"
+  },
+  {
+    "name": "Armor- Piercing Strike (Melee)",
+    "type": "Basic Attack",
+    "desc": "(Basic Attack) Deals 100% physical DMG and inflicts [{-}P.DEF I] and [{-}M.DEF I] on the target, lasting for 2 turns.",
+    "rangeTags": [
+      "Melee",
+      "Unit"
+    ],
+    "rangeInfo": {
+      "Range": [
+        "1",
+        "1"
+      ],
+      "Height Range": [
+        "2",
+        "2"
+      ]
+    },
+    "rangeImage": "melee-unit-r-1-1-hr-2-2"
   },
   {
     "name": "Armor-piercing Shot",
@@ -138,9 +173,49 @@
     "rangeImage": "melee-unit-r-1-1-hr-2-2"
   },
   {
+    "name": "Bandage",
+    "type": "Skill",
+    "desc": "(Healing) [Instant]. Single-target healing. Heals 30% HP.",
+    "rangeTags": [
+      "Unit"
+    ],
+    "cooldown": 3,
+    "rangeInfo": {
+      "Range": [
+        "0",
+        "1"
+      ],
+      "Height Range": [
+        "2",
+        "2"
+      ]
+    },
+    "rangeImage": "unit-r-0-1-hr-2-2"
+  },
+  {
     "name": "Battle Flag of Iria",
     "type": "Skill",
     "desc": "(Leader's Aura) For all \"Iria\" allies in battle, increases ATK by 10% and DEF by 20%."
+  },
+  {
+    "name": "Battle Flag of Papal States",
+    "type": "Skill",
+    "desc": "(Leader's Aura) For all \"Papal States\" allies in battle, increases ATK by 10% and DEF by 20%."
+  },
+  {
+    "name": "Battle Flag of Vlder",
+    "type": "Skill",
+    "desc": "(Leader's Aura) For all \"Vlder\" allies in battle, increases ATK by 10% and DEF by 20%."
+  },
+  {
+    "name": "Battle Flag of the Union",
+    "type": "Skill",
+    "desc": "(Leader's Aura) For all \"The Union\" allies in battle, increases ATK by 10% and DEF by 20%."
+  },
+  {
+    "name": "Battlefield Healing",
+    "type": "Reaction",
+    "desc": "(Reaction) When hit by an active attack, the DMG taken is decreased by 8%. Upon receiving an active attack, heals the ally with the lowest HP percentage within a 2-tile radius of the character by 100% of M.DEF."
   },
   {
     "name": "Blade of Ambush",
@@ -163,6 +238,22 @@
     "desc": "Increases P.ATK by 15%. Increases the range of the character's [basic attack] by 1 tile when having 3 or more [buffs]."
   },
   {
+    "name": "Blessing",
+    "type": "Skill",
+    "desc": "(Healing) Heals all allies within a 2-tile radius of the target. Recovers 30% of HP and converts 2 random [debuffs] into [Level 1 Buffs], lasting for 2 turns.",
+    "rangeTags": [
+      "Unit"
+    ],
+    "cost": 3,
+    "rangeInfo": {
+      "Effect Height": [
+        "2",
+        "2"
+      ]
+    },
+    "rangeImage": "unit-eh-2-2"
+  },
+  {
     "name": "Burning Bridges",
     "type": "Skill",
     "desc": "(Physical DMG) Single-target attack. Deals 150% DMG. Before attacking, gains [Offensive Stance] for 2 turns.",
@@ -183,6 +274,32 @@
       ]
     },
     "rangeImage": "melee-unit-r-1-1-hr-2-2"
+  },
+  {
+    "name": "Burning Grenade",
+    "type": "Skill",
+    "desc": "(Piercing DMG) Deals [Piercing DMG] equal to 10% of the target's HP to all enemies within 1 tile around the target tile and changes the tiles into [burning] for 2 turns.",
+    "rangeTags": [
+      "AoE",
+      "Ground"
+    ],
+    "cost": 1,
+    "cooldown": 3,
+    "rangeInfo": {
+      "Range": [
+        "1",
+        "3"
+      ],
+      "Height Range": [
+        "8",
+        "6"
+      ],
+      "Effect Height": [
+        "2",
+        "2"
+      ]
+    },
+    "rangeImage": "aoe-ground-r-1-3-hr-8-6-eh-2-2"
   },
   {
     "name": "Burnout",
@@ -227,6 +344,46 @@
     "rangeImage": "melee-unit-r-1-3-hr-1-1"
   },
   {
+    "name": "Charged Attack (Curved)",
+    "type": "Basic Attack",
+    "desc": "(Basic Attack) Fires a [Curved Shot] which deals 85% physical DMG and increases the DMG of the next skill by 15%.",
+    "rangeTags": [
+      "Ranged",
+      "Unit"
+    ],
+    "rangeInfo": {
+      "Range": [
+        "2",
+        "3"
+      ],
+      "Height Range": [
+        "8",
+        "6"
+      ]
+    },
+    "rangeImage": "ranged-unit-r-2-3-hr-8-6"
+  },
+  {
+    "name": "Charged Attack (Melee)",
+    "type": "Basic Attack",
+    "desc": "(Basic Attack) Deals 100% physical DMG and increases the DMG of the next skill by 15%.",
+    "rangeTags": [
+      "Melee",
+      "Unit"
+    ],
+    "rangeInfo": {
+      "Range": [
+        "1",
+        "1"
+      ],
+      "Height Range": [
+        "2",
+        "2"
+      ]
+    },
+    "rangeImage": "melee-unit-r-1-1-hr-2-2"
+  },
+  {
     "name": "Charging Spear",
     "type": "Trait",
     "desc": "Increases HP and P.DEF by 15%. Increases ATK by an additional 15% if the character moves before attacking."
@@ -263,9 +420,9 @@
     "desc": "(Passive) For each ally within a 2-tile radius of the character, DEF increases by 10%, up to 40%."
   },
   {
-    "name": "Counterattack",
-    "type": "Reaction",
-    "desc": "(Reaction) When hit by an active attack from the [front or side], performs a basic attack to [Strike Back] if the attacker is within range, dealing 70% of basic attack's DMG. The effect can be activated up to 1 time per round."
+    "name": "Corruption",
+    "type": "Skill",
+    "desc": "(Passive) At the end of the turn, inflicts 2 random [Level 1 Attribute Debuffs] on 1 random enemy within a 3-tile radius of the character, lasting for 2 turns."
   },
   {
     "name": "Counterattack",
@@ -373,6 +530,11 @@
     "rangeImage": "unit-r-0-3-hr-2-2"
   },
   {
+    "name": "Crumbled Order",
+    "type": "Skill",
+    "desc": "(Leader's Aura) For all \"Drifter\" allies in battle, increases ATK by 10% and DEF by 20%."
+  },
+  {
     "name": "Crumbling Smash",
     "type": "Skill",
     "desc": "(Physical DMG) Single-target attack. Deals 150% DMG. Before attacking, the character gains [Shield Break II].",
@@ -415,9 +577,25 @@
     "rangeImage": "melee-unit-r-1-1-hr-2-2"
   },
   {
-    "name": "Curse",
-    "type": "Reaction",
-    "desc": "(Reaction) When hit by an active attack, the DMG taken is decreased by 8%. Upon receiving an active attack, inflicts [Vulnerable II] on the attacker for 2 turns."
+    "name": "Cure Blow",
+    "type": "Skill",
+    "desc": "(Physical DMG) Single-target attack. Deals 100% DMG and heals all allies within a 3-tile radius around the character by 40% of P.ATK.",
+    "rangeTags": [
+      "Melee",
+      "Unit"
+    ],
+    "cost": 2,
+    "rangeInfo": {
+      "Range": [
+        "1",
+        "1"
+      ],
+      "Height Range": [
+        "2",
+        "2"
+      ]
+    },
+    "rangeImage": "melee-unit-r-1-1-hr-2-2"
   },
   {
     "name": "Curse",
@@ -465,6 +643,79 @@
     "rangeImage": "unit-r-0-3-hr-2-2"
   },
   {
+    "name": "Dance of Encouragement",
+    "type": "Skill",
+    "desc": "(Support) Gains [Dance of Encouragement). Effect: Increases DMG by 15% for other allies within 5 tiles around the character and grants 30% [Life Steal], lasting for 3 turns.",
+    "rangeTags": [
+      "Unit"
+    ],
+    "cost": 2,
+    "cooldown": 4,
+    "rangeInfo": {
+      "Effect Height": [
+        "8",
+        "8"
+      ]
+    },
+    "rangeImage": "unit-eh-8-8"
+  },
+  {
+    "name": "Dance of the Butterfly",
+    "type": "Trait",
+    "desc": "Increases ATK by 12%. At the end of the turn, dispels 1 [debuff] from 3 random allies within 3 tiles around the character and grants them 1 [Level 1 Buff], lasting for 2 turns."
+  },
+  {
+    "name": "Dark Ripple",
+    "type": "Skill",
+    "desc": "(Magical DMG) Deals 70% [AoEDMG] to all enemies within a 2-tile radius of the target and inflicts [{x}Passive Skills] and [{x}Reaction Skills], lasting for 2 turns.",
+    "rangeTags": [
+      "AoE",
+      "Unit"
+    ],
+    "cost": 3,
+    "rangeInfo": {
+      "Range": [
+        "1",
+        "3"
+      ],
+      "Height Range": [
+        "8",
+        "8"
+      ],
+      "Effect Height": [
+        "2",
+        "2"
+      ]
+    },
+    "rangeImage": "aoe-unit-r-1-3-hr-8-8-eh-2-2"
+  },
+  {
+    "name": "Dark Withering",
+    "type": "Skill",
+    "desc": "(Magical DMG) Inflicts [Life Loss] equal to 50% of M.ATK to all enemies within a 2-tile radius of the target and inflicts [{-}Healing Received], lasting for 2 turns.",
+    "rangeTags": [
+      "AoE",
+      "Unit"
+    ],
+    "cost": 1,
+    "cooldown": 5,
+    "rangeInfo": {
+      "Range": [
+        "1",
+        "3"
+      ],
+      "Height Range": [
+        "8",
+        "8"
+      ],
+      "Effect Height": [
+        "2",
+        "2"
+      ]
+    },
+    "rangeImage": "aoe-unit-r-1-3-hr-8-8-eh-2-2"
+  },
+  {
     "name": "Dash",
     "type": "Skill",
     "desc": "(Physical DMG) Single-target attack. Deals 110% DMG. Before attacking, DMG is increased by 8% for every 1 tile traversed, up to 40%.",
@@ -484,6 +735,16 @@
       ]
     },
     "rangeImage": "melee-unit-r-1-1-hr-2-2"
+  },
+  {
+    "name": "Dazzling Light",
+    "type": "Trait",
+    "desc": "Gains [Block]. The character can also block [magical attacks]. P.ATK is increased by 9%."
+  },
+  {
+    "name": "Dedication",
+    "type": "Skill",
+    "desc": "(Passive) After initiating an Active Attack, the character recovers 15% HP for all other allies within a 2-tile radius."
   },
   {
     "name": "Defender",
@@ -571,9 +832,95 @@
     "rangeImage": "unit"
   },
   {
+    "name": "Demonshear",
+    "type": "Skill",
+    "desc": "(Magical DMG) Deals magical DMG equal to 80% P.ATK to all enemies within a 3x3 area in the target direction and inflicts [{-}ATK II] for 2 turns.",
+    "rangeTags": [
+      "AoE",
+      "Ground"
+    ],
+    "cost": 2,
+    "cooldown": 3,
+    "rangeInfo": {
+      "Range": [
+        "1",
+        "3"
+      ],
+      "Height Range": [
+        "2",
+        "2"
+      ],
+      "Effect Height": [
+        "2",
+        "2"
+      ]
+    },
+    "rangeImage": "aoe-ground-r-1-3-hr-2-2-eh-2-2"
+  },
+  {
+    "name": "Depression",
+    "type": "Trait",
+    "desc": "Increases MLATK by 9%. At the end of the turn, locks onto 2 random enemies within a 4-tile radius of the character to inflict 1 random [Level 2 Attribute Debuff] for 2 turns."
+  },
+  {
+    "name": "Devout Guard",
+    "type": "Skill",
+    "desc": "(Healing) The character dispels 3 [debuffs], recovers 40% HP, and gains [{+}P.DEF II] and [ /A M.DEF II). The character takes attacks for all other allies within 2 tiles around the character and increases the [Trait] effect to 200%",
+    "rangeTags": [
+      "Unit"
+    ],
+    "cost": 3,
+    "rangeImage": "unit"
+  },
+  {
     "name": "Dharana",
     "type": "Skill",
     "desc": "(Passive) At the start of the turn, if there are no enemies within a 2-tile radius of the character, gains [{+}Crit II] for 1 turn."
+  },
+  {
+    "name": "Dispelling Strike (Magic)",
+    "type": "Basic Attack",
+    "desc": "(Basic Attack) Deals 80% magical DMG and dispels 2 [buffs] on the target.",
+    "rangeTags": [
+      "Ranged",
+      "Unit"
+    ],
+    "rangeInfo": {
+      "Range": [
+        "1",
+        "2"
+      ],
+      "Height Range": [
+        "5",
+        "3"
+      ]
+    },
+    "rangeImage": "ranged-unit-r-1-2-hr-5-3"
+  },
+  {
+    "name": "Dispelling Strike (Melee)",
+    "type": "Basic Attack",
+    "desc": "(Basic Attack) Deals 100% physical DMG and dispels 2 [buffs] on the target.",
+    "rangeTags": [
+      "Melee",
+      "Unit"
+    ],
+    "rangeInfo": {
+      "Range": [
+        "1",
+        "1"
+      ],
+      "Height Range": [
+        "2",
+        "2"
+      ]
+    },
+    "rangeImage": "melee-unit-r-1-1-hr-2-2"
+  },
+  {
+    "name": "Divine Storm Axe",
+    "type": "Trait",
+    "desc": "Increases [AoE DMG) by 20%. When defeating any target, casts an attack, dealing 40% physical DMG to all enemies within 1 tile around the character."
   },
   {
     "name": "Dominate",
@@ -644,6 +991,26 @@
     "cooldown": 3
   },
   {
+    "name": "Enchanting Dance",
+    "type": "Skill",
+    "desc": "(Support) [Instant] Swaps positions with any character within 3 tiles and the character gains [ /A Move II] and [Shift] for 1 turn.",
+    "rangeTags": [
+      "Unit"
+    ],
+    "cooldown": 4,
+    "rangeInfo": {
+      "Range": [
+        "1",
+        "3"
+      ],
+      "Height Range": [
+        "8",
+        "8"
+      ]
+    },
+    "rangeImage": "unit-r-1-3-hr-8-8"
+  },
+  {
     "name": "Endurance Activation",
     "type": "Reaction",
     "desc": "(Reaction) When receiving healing, gains [DMG Reduction II] for 2 turns."
@@ -679,6 +1046,71 @@
     "rangeImage": "ranged-unit-r-1-2-hr-5-3"
   },
   {
+    "name": "Erosion",
+    "type": "Skill",
+    "desc": "(Magical DMG) Single-target attack. Deals 85% DMG and inflicts 2 random [Level 2 Attribute Debuffs] onthe target for 2 turns.",
+    "rangeTags": [
+      "Ranged",
+      "Unit"
+    ],
+    "cost": 1,
+    "rangeInfo": {
+      "Range": [
+        "1",
+        "3"
+      ],
+      "Height Range": [
+        "8",
+        "8"
+      ]
+    },
+    "rangeImage": "ranged-unit-r-1-3-hr-8-8"
+  },
+  {
+    "name": "Execute",
+    "type": "Skill",
+    "desc": "(Physical DMG) Deals 120% [AoE DMG] to all enemies in a straight line of 2 tiles in the target direction. If the target is [Injured], inflicts [{x}Resolve] and [{x}Healing Received] before attacking.",
+    "rangeTags": [
+      "Ground"
+    ],
+    "cost": 3,
+    "rangeInfo": {
+      "Range": [
+        "1",
+        "2"
+      ],
+      "Height Range": [
+        "2",
+        "2"
+      ],
+      "Effect Height": [
+        "2",
+        "2"
+      ]
+    },
+    "rangeImage": "ground-r-1-2-hr-2-2-eh-2-2"
+  },
+  {
+    "name": "Fair Duel",
+    "type": "Skill",
+    "desc": "(Physical DMG) Single-target attack. Deals 180% DMG. Before attacking, dispels all [debuffs] on the character and all [buffs] on the target.",
+    "rangeTags": [
+      "Melee",
+      "Unit"
+    ],
+    "rangeInfo": {
+      "Range": [
+        "1",
+        "1"
+      ],
+      "Height Range": [
+        "2",
+        "2"
+      ]
+    },
+    "rangeImage": "melee-unit-r-1-1-hr-2-2"
+  },
+  {
     "name": "Fancy Footwork",
     "type": "Skill",
     "desc": "(Support) Takes 50% less [AoE DMG] and gains 2 [Dodge] attempts for 2 turns.",
@@ -687,6 +1119,46 @@
     ],
     "cost": 2,
     "rangeImage": "unit"
+  },
+  {
+    "name": "Fatal Attack (Melee)",
+    "type": "Basic Attack",
+    "desc": "(Basic Attack) Deals 100% physical DMG and increases Crit DMG by 15%.",
+    "rangeTags": [
+      "Melee",
+      "Unit"
+    ],
+    "rangeInfo": {
+      "Range": [
+        "1",
+        "1"
+      ],
+      "Height Range": [
+        "2",
+        "2"
+      ]
+    },
+    "rangeImage": "melee-unit-r-1-1-hr-2-2"
+  },
+  {
+    "name": "Feverish Attack (Melee)",
+    "type": "Basic Attack",
+    "desc": "(Basic Attack) Deals 100% physical DMG and gains 20% [Life Steal].",
+    "rangeTags": [
+      "Melee",
+      "Unit"
+    ],
+    "rangeInfo": {
+      "Range": [
+        "1",
+        "1"
+      ],
+      "Height Range": [
+        "2",
+        "2"
+      ]
+    },
+    "rangeImage": "melee-unit-r-1-1-hr-2-2"
   },
   {
     "name": "Field",
@@ -743,6 +1215,26 @@
     "name": "Firewalking",
     "type": "Reaction",
     "desc": "(Reaction) Become immune to [Scorch] and [burning] tiles. When on a [burning] tile, the DMG taken is decreased by 10%. At the end of the turn, recovers 20% of the character's HP."
+  },
+  {
+    "name": "First Aid",
+    "type": "Skill",
+    "desc": "(Healing) Single-target healing. Heals 80% HP.",
+    "rangeTags": [
+      "Unit"
+    ],
+    "cost": 2,
+    "rangeInfo": {
+      "Range": [
+        "0",
+        "1"
+      ],
+      "Height Range": [
+        "2",
+        "2"
+      ]
+    },
+    "rangeImage": "unit-r-0-1-hr-2-2"
   },
   {
     "name": "Flagellant",
@@ -908,6 +1400,12 @@
     "desc": "(Passive) Takes [physical attacks] for all other allies within a 2-tile radius of the character. When triggered, DEF is increased by 20%. Can be activated up to 1 time per round."
   },
   {
+    "name": "Guerrilla",
+    "type": "Skill",
+    "desc": "(Passive) ATK increases by 5%. After attacking, move again by 2 tiles. CD: 2 turns.",
+    "cooldown": 2
+  },
+  {
     "name": "Hardening",
     "type": "Reaction",
     "desc": "(Reaction) When hit by an active attack, the DMG taken is decreased by 8%. After being attacked, the character gains [DMG Reduction II] for 2 turns."
@@ -988,6 +1486,16 @@
     "rangeImage": "ground-r-1-2-hr-2-2-eh-2-2"
   },
   {
+    "name": "Highland Advantage",
+    "type": "Reaction",
+    "desc": "(Reaction) When hit by an active attack, the DMG taken is decreased by 8%. When attacked by an enemy from [Lowland], the DMG taken is additionally decreased by 30%."
+  },
+  {
+    "name": "Highland Archer",
+    "type": "Trait",
+    "desc": "Gains [Climb]. When attacking from [Highland], Crit increases by an additional 20%. Ignores [Dodge]."
+  },
+  {
     "name": "Hookshot",
     "type": "Skill",
     "desc": "(Debuff) [Instant]. Selects 1 enemy within a cross-shaped range around the character, drags them to the character, and inflicts [{x}Reaction Skills] for 1 turn.",
@@ -1048,6 +1556,28 @@
       ]
     },
     "rangeImage": "melee-unit-r-1-1-hr-2-2"
+  },
+  {
+    "name": "Hypnosis",
+    "type": "Skill",
+    "desc": "(Magical DMG) Single-target attack. Deals 35% DMG and inflicts [Sleep] for 2 turns.",
+    "rangeTags": [
+      "Ranged",
+      "Unit"
+    ],
+    "cost": 2,
+    "cooldown": 4,
+    "rangeInfo": {
+      "Range": [
+        "1",
+        "3"
+      ],
+      "Height Range": [
+        "8",
+        "8"
+      ]
+    },
+    "rangeImage": "ranged-unit-r-1-3-hr-8-8"
   },
   {
     "name": "Ice Age",
@@ -1220,6 +1750,11 @@
     "rangeImage": "ranged-unit-r-1-5-hr-8-6"
   },
   {
+    "name": "Inertial Chop",
+    "type": "Skill",
+    "desc": "(Passive) After initiating an Active Attack, deals 20% physical DMG to all enemies within a 1-tile radius of the character."
+  },
+  {
     "name": "Infected Arrowhead",
     "type": "Skill",
     "desc": "(Passive) After a [basic attack], inflicts 2 stacks of [Infection] on the target."
@@ -1256,6 +1791,11 @@
     "desc": "(Passive) At the start of the turn, if there are 2 or more allies within 2 tiles around the character, gains [ 2A DMG II] for 1 turn. When hit by an active attack, if there are 2 or more allies within 2 tiles around the character, decreases DMG taken by 20%."
   },
   {
+    "name": "Inspired Healing",
+    "type": "Skill",
+    "desc": "(Passive) After initiating an Active Attack, heals the ally with the lowest HP in battle by 20% of the character's P.ATK."
+  },
+  {
     "name": "Intimidate",
     "type": "Skill",
     "desc": "(Passive) At the end of the turn, inflicts [{-}ATK II] on the enemy with the highest P.ATK within a 4-tile radius around the character for 2 turns."
@@ -1264,6 +1804,46 @@
     "name": "Intuition",
     "type": "Skill",
     "desc": "(Passive) Takes 20% less [ranged DMG]."
+  },
+  {
+    "name": "Invigorating Strike (Magic)",
+    "type": "Basic Attack",
+    "desc": "(Basic Attack) Deals 80% magical DMG and additionally recovers 1 NRG.",
+    "rangeTags": [
+      "Ranged",
+      "Unit"
+    ],
+    "rangeInfo": {
+      "Range": [
+        "1",
+        "2"
+      ],
+      "Height Range": [
+        "5",
+        "3"
+      ]
+    },
+    "rangeImage": "ranged-unit-r-1-2-hr-5-3"
+  },
+  {
+    "name": "Invigorating Strike (Melee)",
+    "type": "Basic Attack",
+    "desc": "(Basic Attack) Deals 100% physical DMG and additionally recovers 1 NRG.",
+    "rangeTags": [
+      "Melee",
+      "Unit"
+    ],
+    "rangeInfo": {
+      "Range": [
+        "1",
+        "1"
+      ],
+      "Height Range": [
+        "2",
+        "2"
+      ]
+    },
+    "rangeImage": "melee-unit-r-1-1-hr-2-2"
   },
   {
     "name": "Invulnerable",
@@ -1275,6 +1855,26 @@
     "cost": 1,
     "cooldown": 5,
     "rangeImage": "unit"
+  },
+  {
+    "name": "Knight's Glory",
+    "type": "Skill",
+    "desc": "(Support) [Instant] Grants the target [{+}ATK II] for 2 turns. When the targets are from \"the Union,\" the character gains an additional [Physical Shield] with value equal to 20% of HP.",
+    "rangeTags": [
+      "Unit"
+    ],
+    "cooldown": 4,
+    "rangeInfo": {
+      "Range": [
+        "0",
+        "2"
+      ],
+      "Height Range": [
+        "8",
+        "6"
+      ]
+    },
+    "rangeImage": "unit-r-0-2-hr-8-6"
   },
   {
     "name": "Knightly Spirit",
@@ -1420,6 +2020,30 @@
     "desc": "(Passive) When an ally in battle is defeated, recovers 30% HP for the character, and the character gains [ AATK II], [AP.DEF II], and [ /A M.DEF II] for 3 turns."
   },
   {
+    "name": "Light of Healing",
+    "type": "Skill",
+    "desc": "(Healing) Heals all allies within 2 tiles around the target for 60% of the character's M.ATK and dispels 1 [debuff].",
+    "rangeTags": [
+      "Unit"
+    ],
+    "cost": 2,
+    "rangeInfo": {
+      "Range": [
+        "0",
+        "3"
+      ],
+      "Height Range": [
+        "8",
+        "8"
+      ],
+      "Effect Height": [
+        "2",
+        "2"
+      ]
+    },
+    "rangeImage": "unit-r-0-3-hr-8-8-eh-2-2"
+  },
+  {
     "name": "Light of Purification",
     "type": "Skill",
     "desc": "(Support) Dispels 3 [debuffs] on all allies within 3 tiles around the target and gains [Regeneration II] for 2 turns.",
@@ -1480,30 +2104,14 @@
     "rangeImage": "aoe-ground-r-1-3-hr-8-4-eh-2-2"
   },
   {
-    "name": "Luxite Shrapnel",
+    "name": "M.DEF Command",
     "type": "Skill",
-    "desc": "(Piercing DMG) Deals [Piercing DMG] equal to 10% of the target's HP to all enemies within 2 tiles around the target and inflicts 3 stacks of [Infection].",
-    "rangeTags": [
-      "AoE",
-      "Ground"
-    ],
-    "cost": 1,
-    "cooldown": 3,
-    "rangeInfo": {
-      "Range": [
-        "1",
-        "3"
-      ],
-      "Height Range": [
-        "8",
-        "4"
-      ],
-      "Effect Height": [
-        "2",
-        "2"
-      ]
-    },
-    "rangeImage": "aoe-ground-r-1-3-hr-8-4-eh-2-2"
+    "desc": "(Aura) Increases M.DEF by 30% for other allies within 2 tiles around the character."
+  },
+  {
+    "name": "Magic Suppression",
+    "type": "Trait",
+    "desc": "Magical DMG taken is decreased by 20%. Before taking Active Attacks launched by enemies within 3 tiles around the character from the [front or side], performs [Preempt], dealing [Piercing DMG] equal to 60% of M.DEF."
   },
   {
     "name": "Maneuver",
@@ -1537,9 +2145,54 @@
     "desc": "(Passive) [Basic Attack] can target enemies adjacent tothe character. When attacking enemies adjacent to the character, ATK is increased by 15%."
   },
   {
+    "name": "Merciful Strike (Magic)",
+    "type": "Basic Attack",
+    "desc": "(Basic Attack) Deals 80% magical DMG and increases the effect of the next healing skill by 15%, lasting for 2 turns.",
+    "rangeTags": [
+      "Ranged",
+      "Unit"
+    ],
+    "rangeInfo": {
+      "Range": [
+        "1",
+        "2"
+      ],
+      "Height Range": [
+        "5",
+        "3"
+      ]
+    },
+    "rangeImage": "ranged-unit-r-1-2-hr-5-3"
+  },
+  {
+    "name": "Merciful Strike (Melee)",
+    "type": "Basic Attack",
+    "desc": "(Basic Attack) Deals 100% physical DMG and increases the effect of the next healing skill by 15%.",
+    "rangeTags": [
+      "Melee",
+      "Unit"
+    ],
+    "rangeInfo": {
+      "Range": [
+        "1",
+        "1"
+      ],
+      "Height Range": [
+        "2",
+        "2"
+      ]
+    },
+    "rangeImage": "melee-unit-r-1-1-hr-2-2"
+  },
+  {
     "name": "Mountain Tribes",
     "type": "Skill",
     "desc": "(Passive) When the character is [Unharmed], increases Movement by 1 tile. If the character attacks from [Highland] or moves from one tile to another with a height difference of more than 2 tiles, increases the DMG by 20%."
+  },
+  {
+    "name": "NRG Recovery",
+    "type": "Reaction",
+    "desc": "(Reaction) When hit by an active attack, the DMG taken is decreased by 8%. Upon receiving an active attack, additionally recovers 1 NRG."
   },
   {
     "name": "NRG Restoration",
@@ -1561,6 +2214,27 @@
     "cost": 1,
     "cooldown": 1,
     "rangeImage": "unit"
+  },
+  {
+    "name": "Painkiller",
+    "type": "Skill",
+    "desc": "(Healing) [Instant] Heals the target for 20% HP and grants [Regeneration II] and [DMG Reduction III] for 3 turns.",
+    "rangeTags": [
+      "Unit"
+    ],
+    "cost": 1,
+    "cooldown": 3,
+    "rangeInfo": {
+      "Range": [
+        "0",
+        "1"
+      ],
+      "Height Range": [
+        "2",
+        "2"
+      ]
+    },
+    "rangeImage": "unit-r-0-1-hr-2-2"
   },
   {
     "name": "Parry",
@@ -1625,6 +2299,26 @@
     "rangeImage": "unit-r-0-3-hr-5-3"
   },
   {
+    "name": "Powerful Attack (Melee)",
+    "type": "Basic Attack",
+    "desc": "(Basic Attack) Deals 110% Physical DMG.",
+    "rangeTags": [
+      "Melee",
+      "Unit"
+    ],
+    "rangeInfo": {
+      "Range": [
+        "1",
+        "1"
+      ],
+      "Height Range": [
+        "2",
+        "2"
+      ]
+    },
+    "rangeImage": "melee-unit-r-1-1-hr-2-2"
+  },
+  {
     "name": "Powerful Shot",
     "type": "Skill",
     "desc": "(Physical DMG) Single-target attack. Deals 130% DMG. When the target is [Healthy], ATK increases by an additional 15%.",
@@ -1668,31 +2362,19 @@
     "rangeImage": "ranged-unit-r-1-2-hr-5-3"
   },
   {
-    "name": "Powerful Throw",
-    "type": "Skill",
-    "desc": "(Physical DMG) Single-target attack. Deals 150% DMG.",
-    "rangeTags": [
-      "Ranged",
-      "Unit"
-    ],
-    "cost": 2,
-    "cooldown": 3,
-    "rangeInfo": {
-      "Range": [
-        "1",
-        "2"
-      ],
-      "Height Range": [
-        "5",
-        "3"
-      ]
-    },
-    "rangeImage": "ranged-unit-r-1-2-hr-5-3"
-  },
-  {
     "name": "Preempt",
     "type": "Reaction",
     "desc": "(Reaction) [Strike Back] when taking an active attack from [front or side], dealing 70% DMG to the attacker. The effect can be activated up to 1 time per round."
+  },
+  {
+    "name": "Protection of Darkness",
+    "type": "Reaction",
+    "desc": "(Reaction) When hit by an active attack, the DMG taken is decreased by 8%. Before being hit by an active attack, for every [Debuff] on the attacker, decreases DMG taken by an additional 10%, up to 30%."
+  },
+  {
+    "name": "Protection of Light",
+    "type": "Reaction",
+    "desc": "(Reaction) When hit by an active single-target attack, the DMG taken is decreased by 30%. This effect can be activated 1 time per round."
   },
   {
     "name": "Purify",
@@ -1819,6 +2501,26 @@
       ]
     },
     "rangeImage": "aoe-ground-r-1-3-hr-2-2-eh-2-2"
+  },
+  {
+    "name": "Sealing Attack (Magic)",
+    "type": "Basic Attack",
+    "desc": "(Basic Attack) Deals 80% magical DMG and inflicts [{x}Passive Skills] on [Injured] targets before attacking, lasting for 2 turns.",
+    "rangeTags": [
+      "Ranged",
+      "Unit"
+    ],
+    "rangeInfo": {
+      "Range": [
+        "1",
+        "2"
+      ],
+      "Height Range": [
+        "5",
+        "3"
+      ]
+    },
+    "rangeImage": "ranged-unit-r-1-2-hr-5-3"
   },
   {
     "name": "Shadow Gait",
@@ -1968,6 +2670,26 @@
     "rangeImage": "aoe-unit-r-1-3-hr-8-8-eh-2-2"
   },
   {
+    "name": "Silencing Attack (Magic)",
+    "type": "Basic Attack",
+    "desc": "(Basic Attack) Deals 80% magical DMG and inflicts [{x}Active Skills] on [Injured] targets before attacking, lasting for 2 turns.",
+    "rangeTags": [
+      "Ranged",
+      "Unit"
+    ],
+    "rangeInfo": {
+      "Range": [
+        "1",
+        "2"
+      ],
+      "Height Range": [
+        "5",
+        "3"
+      ]
+    },
+    "rangeImage": "ranged-unit-r-1-2-hr-5-3"
+  },
+  {
     "name": "Slash",
     "type": "Basic Attack",
     "desc": "(Basic Attack) Deals 100% Physical DMG.",
@@ -2025,6 +2747,43 @@
     "desc": "(Reaction) When hit by an active attack, the DMG taken is decreased by 10%. When receiving an active melee attack, performs a [Strike Back], dealing [Piercing DMG] to the attacker equal to 50% of the character's P.DEF."
   },
   {
+    "name": "Storm Counter",
+    "type": "Reaction",
+    "desc": "(Reaction) When attacked by an enemy from the [front or side], reduces DMG taken by 8% and performs [Strike Back], dealing 45% physical DMG to all enemies within 1 tile of the character. Can be activated up to 1 time per round."
+  },
+  {
+    "name": "Storm Trample",
+    "type": "Reaction",
+    "desc": "(Reaction) Before receiving a Melee Attack from the [front or side], deals 50% physical DMG to all enemies within 1 tile around the character. If having [Wind Armor], additionally inflicts [{-}DMG II] for 1 turn. Can be triggered up to 1 time per round."
+  },
+  {
+    "name": "Stormage",
+    "type": "Trait",
+    "desc": "After initiating an Active Attack, gains [Wind Armor). Effect: Increases DEF by 40%. After being attacked, gains [Windfury]). Effect: Increases ATK by 15%. All effects last for 2 turns."
+  },
+  {
+    "name": "Stormrage Strike",
+    "type": "Skill",
+    "desc": "(Physical DMG) Charges at 1 enemy withinacross-shaped range around the character, dealing 150% DMG. When having [Windfury], knocks the target back by 2 tiles.",
+    "rangeTags": [
+      "Melee",
+      "Unit"
+    ],
+    "cost": 3,
+    "cooldown": 2,
+    "rangeInfo": {
+      "Range": [
+        "1",
+        "3"
+      ],
+      "Height Range": [
+        "1",
+        "1"
+      ]
+    },
+    "rangeImage": "melee-unit-r-1-3-hr-1-1"
+  },
+  {
     "name": "Straight Shot",
     "type": "Basic Attack",
     "desc": "(Basic Attack) Deals 100% Physical DMG.",
@@ -2050,9 +2809,56 @@
     "desc": "(Reaction) Increases the healing received by 10%. When receiving healing, gains [ 2A DMG II] for 1 turn."
   },
   {
+    "name": "Suppressive Blow",
+    "type": "Skill",
+    "desc": "(Physical DMG) Single-target attack. Deals 110% DMG and inflicts [{x}Reaction Skills], [{x}Active Skills], and [{x}Passive Skills], lasting for 2 turns.",
+    "rangeTags": [
+      "Melee",
+      "Unit"
+    ],
+    "cost": 1,
+    "cooldown": 3,
+    "rangeInfo": {
+      "Range": [
+        "1",
+        "1"
+      ],
+      "Height Range": [
+        "2",
+        "2"
+      ]
+    },
+    "rangeImage": "melee-unit-r-1-1-hr-2-2"
+  },
+  {
+    "name": "Surefire Attack (Curved)",
+    "type": "Basic Attack",
+    "desc": "(Basic Attack) Fires a [Curved Shot] which deals 85% physical DMG and inflicts [{x}Dodge] on the target for 1 turn.",
+    "rangeTags": [
+      "Ranged",
+      "Unit"
+    ],
+    "rangeInfo": {
+      "Range": [
+        "2",
+        "3"
+      ],
+      "Height Range": [
+        "8",
+        "6"
+      ]
+    },
+    "rangeImage": "ranged-unit-r-2-3-hr-8-6"
+  },
+  {
     "name": "Survival Desire",
     "type": "Skill",
     "desc": "(Passive) When [Dying], increases Movement by 2 tiles."
+  },
+  {
+    "name": "Survivalist",
+    "type": "Skill",
+    "desc": "(Passive) If the character is [Dying] after being attacked, recovers 25% HP. Can be activated up to 1 time per round."
   },
   {
     "name": "Sweeping Bash",
@@ -2123,9 +2929,84 @@
     "desc": "(Passive) Upon receiving Physical Attacks, deals [Piercing DMG] to the attacker equal to 50% of the character's P.DEF."
   },
   {
+    "name": "Thunderbolt Assault",
+    "type": "Skill",
+    "desc": "(Physical DMG) Deals 75% [AoE DMG] to all enemies within a 2-tile radius around the character and dispels 2 [buffs].",
+    "rangeTags": [
+      "AoE",
+      "Unit"
+    ],
+    "cost": 2,
+    "cooldown": 3,
+    "rangeInfo": {
+      "Effect Height": [
+        "2",
+        "2"
+      ]
+    },
+    "rangeImage": "aoe-unit-eh-2-2"
+  },
+  {
+    "name": "Tiger Charge",
+    "type": "Skill",
+    "desc": "(Physical DMG) Selects 1 spot within a cross-shaped range around the character, charges to the location, and deals 60% [AoE DMG] to enemies within a 3x3 areain the target direction,",
+    "rangeTags": [
+      "AoE",
+      "Ground"
+    ],
+    "cost": 1,
+    "cooldown": 5,
+    "rangeInfo": {
+      "Range": [
+        "1",
+        "3"
+      ],
+      "Height Range": [
+        "1",
+        "1"
+      ],
+      "Effect Height": [
+        "2",
+        "2"
+      ]
+    },
+    "rangeImage": "aoe-ground-r-1-3-hr-1-1-eh-2-2"
+  },
+  {
+    "name": "Toughness",
+    "type": "Skill",
+    "desc": "(Passive) Gains immunity to the effect of [Injured] and [Dying]."
+  },
+  {
+    "name": "Tranquilizer",
+    "type": "Skill",
+    "desc": "(Support) [Instant] Inflicts [Sleep] on the target for 2 turns.",
+    "rangeTags": [
+      "Unit"
+    ],
+    "cost": 2,
+    "cooldown": 3,
+    "rangeInfo": {
+      "Range": [
+        "1",
+        "1"
+      ],
+      "Height Range": [
+        "2",
+        "2"
+      ]
+    },
+    "rangeImage": "unit-r-1-1-hr-2-2"
+  },
+  {
     "name": "Vantage Point",
     "type": "Skill",
     "desc": "(Passive) Increases ATK by 10% when attacking from the [Highland]."
+  },
+  {
+    "name": "Volunteer",
+    "type": "Trait",
+    "desc": "[AoE DMG] taken is decreased by 20%. If other allies within 6 tiles around the character are [Dying], increases Movement by 2 tiles and SPD by 150. At the start of the turn, the CD of all skills is decreased by 1 turn."
   },
   {
     "name": "Warm-Up",
@@ -2136,31 +3017,6 @@
     "name": "Weak Spot Protection",
     "type": "Reaction",
     "desc": "(Reaction) When hit by an active attack, the DMG taken is decreased by 8%, and the chance of taking critical hits is decreased by 30%."
-  },
-  {
-    "name": "Weak Spot Protection",
-    "type": "Reaction",
-    "desc": "(Reaction) When hit by an active attack, the DMG taken is decreased by 8%, and the chance of taking critical hits is decreased by 30%."
-  },
-  {
-    "name": "Weak Spot Protection",
-    "type": "Reaction",
-    "desc": "(Reaction) When hit by an active attack, the DMG taken is decreased by 8%, and the chance of taking critical hits is decreased by 30%."
-  },
-  {
-    "name": "Weak Spot Protection",
-    "type": "Reaction",
-    "desc": "(Reaction) When hit by an active attack, the DMG taken is decreased by 8%, and the chance of taking critical hits is decreased by 30%."
-  },
-  {
-    "name": "Weakening Attack",
-    "type": "Skill",
-    "desc": "(Passive) After attacking, gains a 50% chance to inflict [{-}ATK II] on the target, lasting 2 turns."
-  },
-  {
-    "name": "Weakening Attack",
-    "type": "Skill",
-    "desc": "(Passive) After attacking, gains a 50% chance to inflict [{-}ATK II] on the target, lasting 2 turns."
   },
   {
     "name": "Weakening Attack",
@@ -2188,5 +3044,11 @@
       ]
     },
     "rangeImage": "ranged-unit-r-1-3-hr-8-6"
+  },
+  {
+    "name": "Will to Survive",
+    "type": "Skill",
+    "desc": "(Passive) If the character is [Dying] at the start of the turn, recovers 50% HP and 2 NRG. Effect CD: 2 turns.",
+    "cooldown": 2
   }
 ]

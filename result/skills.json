@@ -40,6 +40,11 @@
     "desc": "Gains [Jump] and [Climb]. Before attacking, if the starting [tile] and target [tile] have a height difference of more than 2, Crit increases by an additional 30%."
   },
   {
+    "name": "Air of Royalty",
+    "type": "Reaction",
+    "desc": "(Reaction) DMG taken from Melee attacks decreases by 30%."
+  },
+  {
     "name": "Alert Shot",
     "type": "Skill",
     "desc": "(Physical DMG) Performs [Alert] on a 3x3 area in the target direction, and deals 100% DMG once the enemy enters this area. Can be activated up to 2 times per round.",
@@ -72,6 +77,28 @@
     "name": "Anesthetic",
     "type": "Skill",
     "desc": "(Passive) After attacking, inflicts 1 stack of [Infection] on the target. When actively using [class skill] to hit targets with 5 or more stacks of [Infection], inflicts [Sleep] after attacking. The effect lasts for 1 turn."
+  },
+  {
+    "name": "Anger of Icefield",
+    "type": "Skill",
+    "desc": "(Physical DMG) Alexei selects 1 enemy within a cross-shaped range to charge at, deals 50% DMG, and inflicts [Stunned] for 1 turn. Additionally, he deals 50% [Ice] [AoE DMG] to all enemies within 2 tiles around the target. After attacking, he gains [Warrior of Frost] for 2 turns.",
+    "rangeTags": [
+      "Melee",
+      "Unit"
+    ],
+    "cost": 2,
+    "cooldown": 4,
+    "rangeInfo": {
+      "Range": [
+        "1",
+        "3"
+      ],
+      "Height Range": [
+        "1",
+        "1"
+      ]
+    },
+    "rangeImage": "melee-unit-r-1-3-hr-1-1-aoe"
   },
   {
     "name": "Arm Bracers",
@@ -147,9 +174,45 @@
     "desc": "Increases ATK by 25% when attacking an enemy from the [side or behind]."
   },
   {
+    "name": "Assault",
+    "type": "Skill",
+    "desc": "(Support) [Instant] Gains [{+}Crit I], [{+}Crit DMG I], and [ 2A Move II] for 1 turn.",
+    "rangeTags": [
+      "Unit"
+    ],
+    "cost": 1,
+    "cooldown": 3,
+    "rangeImage": "unit"
+  },
+  {
     "name": "Axe of Boldness",
     "type": "Trait",
     "desc": "Increases [AoE DMG] by 35%."
+  },
+  {
+    "name": "BOOOOOM!",
+    "type": "Skill",
+    "desc": "(Magical DMG) Beryl cannot move before performing this skill. She attacks any enemies within 2 tiles 5 times, with hits randomly divided amongst those within range. Every hit deals 30% [Fire] [AoE DMG] to all enemies within 1 tile of the target, with a 50% chance of inflicting [Scorch].",
+    "rangeTags": [
+      "AoE",
+      "Unit"
+    ],
+    "cost": 5,
+    "rangeInfo": {
+      "Range": [
+        "3",
+        "5"
+      ],
+      "Height Range": [
+        "5",
+        "3"
+      ],
+      "Effect Height": [
+        "2",
+        "2"
+      ]
+    },
+    "rangeImage": "aoe-unit-r-3-5-hr-5-3-eh-2-2"
   },
   {
     "name": "Backstab",
@@ -191,6 +254,31 @@
       ]
     },
     "rangeImage": "unit-r-0-1-hr-2-2"
+  },
+  {
+    "name": "Bang! (Ranged)",
+    "type": "Basic Attack",
+    "desc": "(Basic Attack) Single-target attack. Beryl deals physical DMG equal to 80% of her M.ATK. There is a 30% chance to inflict [Stunned] for 1 turn.",
+    "rangeTags": [
+      "Ranged",
+      "Unit"
+    ],
+    "rangeInfo": {
+      "Range": [
+        "2",
+        "3"
+      ],
+      "Height Range": [
+        "5",
+        "3"
+      ]
+    },
+    "rangeImage": "ranged-unit-r-2-3-hr-5-3"
+  },
+  {
+    "name": "Battle Fever",
+    "type": "Skill",
+    "desc": "(Passive) After initiating an Active Attack, the character takes 15% less DMG. Dealing a Crit DMG additionally decreases DMG taken by 25% for 1 turn."
   },
   {
     "name": "Battle Flag of Iria",
@@ -252,6 +340,16 @@
       ]
     },
     "rangeImage": "unit-eh-2-2"
+  },
+  {
+    "name": "Brutebear Blood",
+    "type": "Trait",
+    "desc": "Alexei becomes immune to [{x}Resolve]. His ATK is increased by 10% and he ignores the effects of [Frosty] tiles. Alexei possesses [Unlimited Resolve] until the start of the next turn, his [Trait] attribute bonuses double. This effect has a CD of 7 turns and cannot be dispelled or immunized."
+  },
+  {
+    "name": "Brutebear Counter",
+    "type": "Reaction",
+    "desc": "(Reaction) Performs a [Strike Back] when hit by an active attack from the [front or side], dealing 70% physical DMG to the attacker. The effect can be activated up to 2 times per round."
   },
   {
     "name": "Burning Bridges",
@@ -323,6 +421,16 @@
     "rangeImage": "ranged-unit-r-1-2-hr-8-8"
   },
   {
+    "name": "Casual Search",
+    "type": "Skill",
+    "desc": "(Support) [Instant] skill. Beryl gains 1 random [Luxite Skill]. The skill remains available for 2 turns.",
+    "rangeTags": [
+      "Unit"
+    ],
+    "cooldown": 3,
+    "rangeImage": "unit"
+  },
+  {
     "name": "Charge Pursuit",
     "type": "Skill",
     "desc": "(Physical DMG) [Instant]. Charges at 1 enemy within a cross-shaped range around the character, dealing 30% DMG. Gains immunity to [Preempt].",
@@ -389,6 +497,27 @@
     "desc": "Increases HP and P.DEF by 15%. Increases ATK by an additional 15% if the character moves before attacking."
   },
   {
+    "name": "Chuu Chuu Chuu!",
+    "type": "Skill",
+    "desc": "(Magical DMG) Beryl gains [Armor Piercing] before attacking, then deals 50% DMG to the target 3 times.",
+    "rangeTags": [
+      "Ranged",
+      "Unit"
+    ],
+    "cost": 3,
+    "rangeInfo": {
+      "Range": [
+        "2",
+        "3"
+      ],
+      "Height Range": [
+        "5",
+        "3"
+      ]
+    },
+    "rangeImage": "ranged-unit-r-2-3-hr-5-3"
+  },
+  {
     "name": "Cloud-Piercing Arrow",
     "type": "Skill",
     "desc": "(Physical DMG) Single-target attack. Deals 140% DMG with [Curved Shot].",
@@ -428,6 +557,17 @@
     "name": "Counterattack",
     "type": "Reaction",
     "desc": "(Reaction) When hit by an active attack from the [front or side], performs a basic attack to [Strike Back] if the attacker is within range, dealing 70% of basic attack's DMG. The effect can be activated up to 1 time per round."
+  },
+  {
+    "name": "Counterattack Storm",
+    "type": "Skill",
+    "desc": "(Support) The character's Strike Back Range is increased by 2 tiles. When performing a Strike Back, physical DMG is increased by 85%, and the character gains 1 Strike Back Count and [Connterattack] This effect lasts for 2 turns.",
+    "rangeTags": [
+      "Unit"
+    ],
+    "cost": 2,
+    "cooldown": 5,
+    "rangeImage": "unit"
   },
   {
     "name": "Covering Shot",
@@ -510,6 +650,11 @@
     "rangeImage": "melee-unit-r-1-1-hr-2-2"
   },
   {
+    "name": "Crit Command",
+    "type": "Skill",
+    "desc": "(Aura) Increases Crit by 20% for other allies within 2 tiles around the character."
+  },
+  {
     "name": "Critical Enhancement",
     "type": "Skill",
     "desc": "(Support) Grants [{+}Crit II] to allies and grants immunity to [Disruption], lasting for 2 turns.",
@@ -528,6 +673,26 @@
       ]
     },
     "rangeImage": "unit-r-0-3-hr-2-2"
+  },
+  {
+    "name": "Critical Strike (Melee)",
+    "type": "Basic Attack",
+    "desc": "(Basic Attack) Deals 50% physical DMG 2 times and increases Crit by 15% before attacking.",
+    "rangeTags": [
+      "Melee",
+      "Unit"
+    ],
+    "rangeInfo": {
+      "Range": [
+        "1",
+        "1"
+      ],
+      "Height Range": [
+        "2",
+        "2"
+      ]
+    },
+    "rangeImage": "melee-unit-r-1-1-hr-2-2"
   },
   {
     "name": "Crumbled Order",
@@ -621,6 +786,11 @@
       ]
     },
     "rangeImage": "ranged-unit-r-2-3-hr-8-6"
+  },
+  {
+    "name": "Cutie",
+    "type": "Reaction",
+    "desc": "(Reaction) Decreases [Ranged DMG] taken by Beryl by 25% and [AoE DMG] taken by 40%."
   },
   {
     "name": "Damage Enhancement",
@@ -735,6 +905,27 @@
       ]
     },
     "rangeImage": "melee-unit-r-1-1-hr-2-2"
+  },
+  {
+    "name": "Dawnlight",
+    "type": "Skill",
+    "desc": "(Magical DMG) Single-target attack. Dantalion deals Magical DMG equal to 130% of his P.ATK. Before attacking, 2 random [Buffs] on the target become [Level 1 Attribute Debuffs] for 1 turn.",
+    "rangeTags": [
+      "Ranged",
+      "Unit"
+    ],
+    "cost": 3,
+    "rangeInfo": {
+      "Range": [
+        "1",
+        "3"
+      ],
+      "Height Range": [
+        "5",
+        "3"
+      ]
+    },
+    "rangeImage": "ranged-unit-r-1-3-hr-5-3"
   },
   {
     "name": "Dazzling Light",
@@ -863,6 +1054,24 @@
     "desc": "Increases MLATK by 9%. At the end of the turn, locks onto 2 random enemies within a 4-tile radius of the character to inflict 1 random [Level 2 Attribute Debuff] for 2 turns."
   },
   {
+    "name": "Destructive Storm",
+    "type": "Skill",
+    "desc": "(Physical DMG) Deals 50% [AoE DMG] to all enemies within a 4-tile radius around the character and inflicts 2 random [Level 2 Attribute Debuffs] for 2 turns.",
+    "rangeTags": [
+      "AoE",
+      "Ground"
+    ],
+    "cost": 3,
+    "cooldown": 2,
+    "rangeInfo": {
+      "Effect Height": [
+        "2",
+        "2"
+      ]
+    },
+    "rangeImage": "aoe-ground-eh-2-2"
+  },
+  {
     "name": "Devout Guard",
     "type": "Skill",
     "desc": "(Healing) The character dispels 3 [debuffs], recovers 40% HP, and gains [{+}P.DEF II] and [ /A M.DEF II). The character takes attacks for all other allies within 2 tiles around the character and increases the [Trait] effect to 200%",
@@ -876,6 +1085,11 @@
     "name": "Dharana",
     "type": "Skill",
     "desc": "(Passive) At the start of the turn, if there are no enemies within a 2-tile radius of the character, gains [{+}Crit II] for 1 turn."
+  },
+  {
+    "name": "Disdain",
+    "type": "Trait",
+    "desc": "Increases P.ATK by 9% and P.DEF by 9%. At the end of the turn, if the character is [Healthy] and within the foe's threat range, gains [Disdain]. Effect: Decreases DMG taken by 20% for 1 turn. Effect CD: 3 turns."
   },
   {
     "name": "Dispelling Strike (Magic)",
@@ -985,6 +1199,12 @@
     "rangeImage": "unit"
   },
   {
+    "name": "Eerie Footwork",
+    "type": "Reaction",
+    "desc": "(Reaction) When [Healthy], after receiving a single-target attack, teleports behind the attacker, initiates a [strike back], which deals 70% DMG. Gains [Dodge] for 1 turn. When [Injured], triggers [Dodge]. CD: 3 turns.",
+    "cooldown": 3
+  },
+  {
     "name": "Emergency Dodge",
     "type": "Skill",
     "desc": "(Passive) At the end of the turn, if the characteris [Injured], gains [Dodge] for 2 turns. CD: 3 turns.",
@@ -1009,6 +1229,27 @@
       ]
     },
     "rangeImage": "unit-r-1-3-hr-8-8"
+  },
+  {
+    "name": "Endless Dawn",
+    "type": "Skill",
+    "desc": "(Mixed DMG) Dantalion deals 40% physical DMG 3 times. He deals Magical DMG equal to 50% P.ATK to the first enemy in each column within a 3x3 area in the target direction, knocks them hack bv 2 tiles, and dispels 1 [Buff].",
+    "rangeTags": [
+      "Melee",
+      "Unit"
+    ],
+    "cost": 4,
+    "rangeInfo": {
+      "Range": [
+        "1",
+        "1"
+      ],
+      "Height Range": [
+        "2",
+        "2"
+      ]
+    },
+    "rangeImage": "melee-unit-r-1-1-hr-2-2"
   },
   {
     "name": "Endurance Activation",
@@ -1164,6 +1405,11 @@
     "name": "Field",
     "type": "Skill",
     "desc": "(Aura) Decreases [AoE DMG] taken by all allies within 3 tiles around the character by 25%."
+  },
+  {
+    "name": "Fight to the Death",
+    "type": "Skill",
+    "desc": "(Passive) When [Dying], increases ATK and DEF by 20%."
   },
   {
     "name": "Fire Pillar",
@@ -1329,6 +1575,27 @@
     "desc": "(Reaction) When hit by an active attack, the DMG taken is decreased by 8%. After being attacked, the character gains [ 2A Move II] for 2 turns."
   },
   {
+    "name": "Flurry of Stabs",
+    "type": "Skill",
+    "desc": "(Physical DMG) Deals 45% DMG 3 times. When attacking, Crit increases by 20%.",
+    "rangeTags": [
+      "Melee",
+      "Unit"
+    ],
+    "cost": 2,
+    "rangeInfo": {
+      "Range": [
+        "1",
+        "1"
+      ],
+      "Height Range": [
+        "2",
+        "2"
+      ]
+    },
+    "rangeImage": "melee-unit-r-1-1-hr-2-2"
+  },
+  {
     "name": "Focused Defense",
     "type": "Trait",
     "desc": "Gains [Block]. While having a [physical shield], [block] chance is increased to 100%. At the start of the battle, gains a [Physical Shield] with value equal to 30% of the character's HP. This effect cannot be dispelled or immunized."
@@ -1360,6 +1627,11 @@
     "rangeImage": "ranged-unit-r-1-4-hr-5-3"
   },
   {
+    "name": "For Iria!",
+    "type": "Skill",
+    "desc": "(Leader's Aura) For all \"Iria\" allies in battle increases ATK by 10% and DEF by 20%. Allies' attacks deal 20% more DMG to the enemies affected by 3 or more [debuffs]."
+  },
+  {
     "name": "Forced March",
     "type": "Skill",
     "desc": "(Support) [Instant] Gains [ /A Move II] and [Control Immunity], and decreases the physical DMG taken by 100%. The effects last for 1 turn.",
@@ -1369,6 +1641,26 @@
     "cost": 1,
     "cooldown": 3,
     "rangeImage": "unit"
+  },
+  {
+    "name": "Frenzied Slash (Melee)",
+    "type": "Basic Attack",
+    "desc": "(Basic Attack) Deals 110% DMG. If the target is defeated, the character recovers 1 NRG.",
+    "rangeTags": [
+      "Melee",
+      "Unit"
+    ],
+    "rangeInfo": {
+      "Range": [
+        "1",
+        "1"
+      ],
+      "Height Range": [
+        "2",
+        "2"
+      ]
+    },
+    "rangeImage": "melee-unit-r-1-1-hr-2-2"
   },
   {
     "name": "Front Defense",
@@ -1385,6 +1677,24 @@
     "rangeImage": "unit"
   },
   {
+    "name": "Gale Dance",
+    "type": "Skill",
+    "desc": "(Physical DMG) Deals 75% [AoE DMG] to all enemies within a 2-tile radius around the character. Before attacking, gains [{+}Crit II] for 2 turns.",
+    "rangeTags": [
+      "AoE",
+      "Ground"
+    ],
+    "cost": 2,
+    "cooldown": 5,
+    "rangeInfo": {
+      "Effect Height": [
+        "2",
+        "2"
+      ]
+    },
+    "rangeImage": "aoe-ground-eh-2-2"
+  },
+  {
     "name": "Global Guard",
     "type": "Skill",
     "desc": "(Support) Takes [physical attacks] for all other allies within a 2-tile radius of the character. When activated, the character gains [Counterattack] and [Block Enhancement] for 3 turns.",
@@ -1393,6 +1703,11 @@
     ],
     "cost": 3,
     "rangeImage": "unit"
+  },
+  {
+    "name": "Goredrinker",
+    "type": "Skill",
+    "desc": "(Passive) After being attacked, gains [Goredrinker] for 2 turns."
   },
   {
     "name": "Guard",
@@ -1449,6 +1764,26 @@
       "Unit"
     ],
     "cost": 3,
+    "rangeInfo": {
+      "Range": [
+        "1",
+        "1"
+      ],
+      "Height Range": [
+        "2",
+        "2"
+      ]
+    },
+    "rangeImage": "melee-unit-r-1-1-hr-2-2"
+  },
+  {
+    "name": "Hidden Thorn (Melee)",
+    "type": "Basic Attack",
+    "desc": "(Basic Attack) Col deals 100% DMG and she gains [Ignore Assist] if launching a (back attack].",
+    "rangeTags": [
+      "Melee",
+      "Unit"
+    ],
     "rangeInfo": {
       "Range": [
         "1",
@@ -1580,6 +1915,11 @@
     "rangeImage": "ranged-unit-r-1-3-hr-8-8"
   },
   {
+    "name": "I'm a Genius!",
+    "type": "Trait",
+    "desc": "Increases Beryl's M.ATK by 8%. At the start of the turn, she has a 50% chance to gain 1 random [Level 2 Buff], which lasts for 2 turns, she additionally recovers 1 NRG."
+  },
+  {
     "name": "Ice Age",
     "type": "Skill",
     "desc": "(Magical DMG) Deals 75% [ice] [AoE DMG] to all enemies in a 3-tile radius around the character and inflicts [SPD I] and [{-}Move I] for 2 turns.",
@@ -1600,6 +1940,26 @@
     "type": "Skill",
     "desc": "(Passive) If the character has no [Physical Shield], at the start of the turn, gains a [physical shield] equal to 20% of the character's HP. This effect cannot be dispelled. Effect CD: 2 turns.",
     "cooldown": 2
+  },
+  {
+    "name": "Ice Attack (Melee)",
+    "type": "Basic Attack",
+    "desc": "(Basic Attack) Deals 100% physical DMG and inflicts [{-}Move I] on [Healthy] targets, lasting for 1 turn.",
+    "rangeTags": [
+      "Melee",
+      "Unit"
+    ],
+    "rangeInfo": {
+      "Range": [
+        "1",
+        "1"
+      ],
+      "Height Range": [
+        "2",
+        "2"
+      ]
+    },
+    "rangeImage": "melee-unit-r-1-1-hr-2-2"
   },
   {
     "name": "Ice Cone",
@@ -1857,6 +2217,11 @@
     "rangeImage": "unit"
   },
   {
+    "name": "Killer Instinct",
+    "type": "Trait",
+    "desc": "Col possesses [Jump]. If there are no allies within 2 tiles around Col, her P.ATK and Crit increase by 5%. She can [Act Again] after launching an active attack on an enemy from the [side or behind] and defeating them. CD: 3 turns."
+  },
+  {
     "name": "Knight's Glory",
     "type": "Skill",
     "desc": "(Support) [Instant] Grants the target [{+}ATK II] for 2 turns. When the targets are from \"the Union,\" the character gains an additional [Physical Shield] with value equal to 20% of HP.",
@@ -2068,6 +2433,11 @@
     "rangeImage": "unit-r-0-2-hr-8-8-eh-2-2"
   },
   {
+    "name": "Lightning",
+    "type": "Skill",
+    "desc": "(Passive) Increases SPD by 50 points. Increases Crit by 50% if moved more than 3 tiles before attacking."
+  },
+  {
     "name": "Lone Ranger",
     "type": "Skill",
     "desc": "(Passive) When there are no allies within 2 tiles around the character, ATK and DEF increase by 8%, and Crit increases by 10%."
@@ -2140,6 +2510,17 @@
     "rangeImage": "melee-unit-r-1-1-hr-2-2"
   },
   {
+    "name": "Mask",
+    "type": "Skill",
+    "desc": "(Healing) Col dispels 2 debuffs, recovers 25% HP, and she gains [Invisibility] and [{+}Crit V] for 1 turn.",
+    "rangeTags": [
+      "Unit"
+    ],
+    "cost": 1,
+    "cooldown": 3,
+    "rangeImage": "unit"
+  },
+  {
     "name": "Melee Archer",
     "type": "Skill",
     "desc": "(Passive) [Basic Attack] can target enemies adjacent tothe character. When attacking enemies adjacent to the character, ATK is increased by 15%."
@@ -2200,6 +2581,28 @@
     "desc": "(Passive) At the end of the turn, recovers an additional 1 NRG. If NRG is less than 1, recovers another 1 NRG."
   },
   {
+    "name": "NRG-Depleting Blow",
+    "type": "Skill",
+    "desc": "(Physical DMG) Single-target attack. Deals 130% DMG and depletes all of the target's NRG.",
+    "rangeTags": [
+      "Melee",
+      "Unit"
+    ],
+    "cost": 1,
+    "cooldown": 4,
+    "rangeInfo": {
+      "Range": [
+        "1",
+        "1"
+      ],
+      "Height Range": [
+        "2",
+        "2"
+      ]
+    },
+    "rangeImage": "melee-unit-r-1-1-hr-2-2"
+  },
+  {
     "name": "Offensive Assault",
     "type": "Skill",
     "desc": "(Passive) Increases ATK by 8% when attacking."
@@ -2214,6 +2617,11 @@
     "cost": 1,
     "cooldown": 1,
     "rangeImage": "unit"
+  },
+  {
+    "name": "Omen of Death",
+    "type": "Skill",
+    "desc": "(Passive) Gains [Feverish Beast] when a character is defeated in battle, lasting for 3 turns. Recovers 2 NRG when the character defeats an enemy."
   },
   {
     "name": "Painkiller",
@@ -2242,14 +2650,49 @@
     "desc": "(Passive) Before receiving a physical melee attack, turns to face the attacker and adds 20% of the character's P.ATK to P.DEF."
   },
   {
+    "name": "Path of Kingship",
+    "type": "Trait",
+    "desc": "Increases Dantalion's ATK and DEF by 5%. For every 1 character defeated in battle, he recovers 20% HP and 1 NRG."
+  },
+  {
     "name": "Penetrating Arrow",
     "type": "Skill",
     "desc": "(Passive) After attacking, inflicts [{-}P.DEF II] on the target for 3 turns."
   },
   {
+    "name": "Perfect Assassin",
+    "type": "Skill",
+    "desc": "(Leader's Aura) For all \"Alacrity” allies in battle, increases ATK by 10%, DEF by 20%, Crit by 15%, and Crit DMG by 15%."
+  },
+  {
     "name": "Perfect Shield",
     "type": "Skill",
     "desc": "(Passive) When [Unharmed], increases ATK and DEF by 10%."
+  },
+  {
+    "name": "Phantom Storm",
+    "type": "Skill",
+    "desc": "(Physical DMG) Deals 75% DMG to all enemies within a 3x4 area in the target direction and inflicts [{-}ATK I] and [{-}Move I], lasting for 2 turns.",
+    "rangeTags": [
+      "AoE",
+      "Ground"
+    ],
+    "cost": 3,
+    "rangeInfo": {
+      "Range": [
+        "1",
+        "4"
+      ],
+      "Height Range": [
+        "2",
+        "2"
+      ],
+      "Effect Height": [
+        "2",
+        "2"
+      ]
+    },
+    "rangeImage": "aoe-ground-r-1-4-hr-2-2-eh-2-2"
   },
   {
     "name": "Physical Reflection",
@@ -2503,6 +2946,26 @@
     "rangeImage": "aoe-ground-r-1-3-hr-2-2-eh-2-2"
   },
   {
+    "name": "Scorching Attack (Magic)",
+    "type": "Basic Attack",
+    "desc": "(Basic Attack) Deals 80% magical DMG and inflicts [Scorch] on the target for 2 turns.",
+    "rangeTags": [
+      "Ranged",
+      "Unit"
+    ],
+    "rangeInfo": {
+      "Range": [
+        "1",
+        "2"
+      ],
+      "Height Range": [
+        "5",
+        "3"
+      ]
+    },
+    "rangeImage": "ranged-unit-r-1-2-hr-5-3"
+  },
+  {
     "name": "Sealing Attack (Magic)",
     "type": "Basic Attack",
     "desc": "(Basic Attack) Deals 80% magical DMG and inflicts [{x}Passive Skills] on [Injured] targets before attacking, lasting for 2 turns.",
@@ -2616,6 +3079,26 @@
     "name": "Shield of Raid",
     "type": "Trait",
     "desc": "Gains [Block]. When taking physical DMG for the first time from [front or side] enemies, gains a 100% chance to trigger [block], after which the character deals 15% more DMG."
+  },
+  {
+    "name": "Shield-Break Attack (Melee)",
+    "type": "Basic Attack",
+    "desc": "(Basic Attack) Deals 100% physical DMG and gains [Shield Break I] before attacking.",
+    "rangeTags": [
+      "Melee",
+      "Unit"
+    ],
+    "rangeInfo": {
+      "Range": [
+        "1",
+        "1"
+      ],
+      "Height Range": [
+        "2",
+        "2"
+      ]
+    },
+    "rangeImage": "melee-unit-r-1-1-hr-2-2"
   },
   {
     "name": "Shieldbreak Jab",
@@ -2914,6 +3397,11 @@
     "desc": "(Passive) When [Injured], increases ATK and DEF by 8%."
   },
   {
+    "name": "Tenacity",
+    "type": "Reaction",
+    "desc": "(Reaction) When hit by an active attack from a [Counter Role] character, the DMG taken is decreased by 25%."
+  },
+  {
     "name": "Terminate",
     "type": "Skill",
     "desc": "(Passive) When attacking [Dying] enemies, increases ATK by 25%."
@@ -2978,6 +3466,17 @@
     "desc": "(Passive) Gains immunity to the effect of [Injured] and [Dying]."
   },
   {
+    "name": "Traceless Shadow",
+    "type": "Skill",
+    "desc": "(Support) Gains 1 [Dodge] for 1 turn. Upon a successful [dodge], teleports to the attacker's back, dealing 100% Physical DMG, and gains [dodge] again for 1 turn.",
+    "rangeTags": [
+      "Unit"
+    ],
+    "cost": 2,
+    "cooldown": 5,
+    "rangeImage": "unit"
+  },
+  {
     "name": "Tranquilizer",
     "type": "Skill",
     "desc": "(Support) [Instant] Inflicts [Sleep] on the target for 2 turns.",
@@ -2999,6 +3498,36 @@
     "rangeImage": "unit-r-1-1-hr-2-2"
   },
   {
+    "name": "Try This!",
+    "type": "Skill",
+    "desc": "(Healing) Heals other allies within 3 tiles around the character, restoring 10% HP and 2 NRG.",
+    "rangeTags": [
+      "Unit"
+    ],
+    "cost": 2,
+    "cooldown": 4,
+    "rangeInfo": {
+      "Range": [
+        "0",
+        "0"
+      ],
+      "Height Range": [
+        "8",
+        "8"
+      ],
+      "Effect Height": [
+        "2",
+        "2"
+      ]
+    },
+    "rangeImage": "unit-r-0-0-hr-8-8-eh-2-2"
+  },
+  {
+    "name": "Unsheathe",
+    "type": "Skill",
+    "desc": "(Passive) Before initiating an active melee attack, deals magical DMG equal to 40% of P.ATK. If the target has a [Shield], inflicts [Vulnerable II] that lasts for 2 turns before attacking. All the effects can be triggered up to 1 time per round."
+  },
+  {
     "name": "Vantage Point",
     "type": "Skill",
     "desc": "(Passive) Increases ATK by 10% when attacking from the [Highland]."
@@ -3007,6 +3536,31 @@
     "name": "Volunteer",
     "type": "Trait",
     "desc": "[AoE DMG] taken is decreased by 20%. If other allies within 6 tiles around the character are [Dying], increases Movement by 2 tiles and SPD by 150. At the start of the turn, the CD of all skills is decreased by 1 turn."
+  },
+  {
+    "name": "Wall of Flame",
+    "type": "Skill",
+    "desc": "(Magical DMG) Selects 1 spot within a cross-shaped range around the character, deals 70% [AoE DMG] to all enemies in a horizontal row of 5 tiles, and changes the tiles into [burning]. The effect lasts for 2 turns.",
+    "rangeTags": [
+      "AoE",
+      "Ground"
+    ],
+    "cost": 3,
+    "rangeInfo": {
+      "Range": [
+        "1",
+        "3"
+      ],
+      "Height Range": [
+        "8",
+        "6"
+      ],
+      "Effect Height": [
+        "2",
+        "2"
+      ]
+    },
+    "rangeImage": "aoe-ground-r-1-3-hr-8-6-eh-2-2"
   },
   {
     "name": "Warm-Up",
@@ -3046,9 +3600,85 @@
     "rangeImage": "ranged-unit-r-1-3-hr-8-6"
   },
   {
+    "name": "Whirlwind Axe",
+    "type": "Skill",
+    "desc": "(Physical DMG) Alexei deals 90% DMG to all enemies within 2 tiles around himself. Every enemy defeated by this skill reduces the CD of the [Trait] effect by 1 turn.",
+    "rangeTags": [
+      "AoE",
+      "Unit"
+    ],
+    "cost": 3,
+    "rangeInfo": {
+      "Effect Height": [
+        "2",
+        "2"
+      ]
+    },
+    "rangeImage": "aoe-unit-eh-2-2"
+  },
+  {
+    "name": "White Sword (Ranged)",
+    "type": "Basic Attack",
+    "desc": "(Basic Attack) Single-target attack. Dantalion deals Magical DMG equal to 90% of his P.ATK.",
+    "rangeTags": [
+      "Ranged",
+      "Unit"
+    ],
+    "rangeInfo": {
+      "Range": [
+        "1",
+        "2"
+      ],
+      "Height Range": [
+        "5",
+        "3"
+      ]
+    },
+    "rangeImage": "ranged-unit-r-1-2-hr-5-3"
+  },
+  {
+    "name": "Wild Howl",
+    "type": "Skill",
+    "desc": "(Piercing DMG) Alexei deals DMG equal to 40% of his M.ATK and inflicts [{-}Move II) and [{-}ATK III] to all enemies within a 3-tile radius of him, lasting for 2 turns.",
+    "rangeTags": [
+      "AoE",
+      "Ground"
+    ],
+    "cost": 1,
+    "cooldown": 5,
+    "rangeInfo": {
+      "Effect Height": [
+        "2",
+        "2"
+      ]
+    },
+    "rangeImage": "aoe-ground-eh-2-2"
+  },
+  {
     "name": "Will to Survive",
     "type": "Skill",
     "desc": "(Passive) If the character is [Dying] at the start of the turn, recovers 50% HP and 2 NRG. Effect CD: 2 turns.",
     "cooldown": 2
+  },
+  {
+    "name": "Wipe Out",
+    "type": "Skill",
+    "desc": "(Physical DMG) Col deals 60% DMG 3 times. Before attacking, when there are no allies within a 2-tile radius, Col gains [Ignore Assist]. When defeating a target, she gains [Dodge], lasting for 1 turn.",
+    "rangeTags": [
+      "Melee",
+      "Unit"
+    ],
+    "cost": 4,
+    "rangeInfo": {
+      "Range": [
+        "1",
+        "1"
+      ],
+      "Height Range": [
+        "2",
+        "2"
+      ]
+    },
+    "rangeImage": "melee-unit-r-1-1-hr-2-2"
   }
 ]

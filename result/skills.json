@@ -25,9 +25,26 @@
     "rangeImage": "ground-r-0-2-hr-8-8-eh-2-2"
   },
   {
+    "name": "Absolute Domain",
+    "type": "Skill",
+    "desc": "(Support) Performs [Alert] on a 1-tile radius around the character, dealing 70% DMG and interrupting actions once an enemy enters this area. Can be activated up to 2 times per round.",
+    "rangeTags": [
+      "Unit"
+    ],
+    "cost": 2,
+    "cooldown": 5,
+    "rangeInfo": {
+      "Effect Height": [
+        "2",
+        "2"
+      ]
+    },
+    "rangeImage": "unit-eh-2-2"
+  },
+  {
     "name": "Aim",
     "type": "Skill",
-    "desc": "(Support) [Instant] Gains [{+}Crit II] and (Ignore Dodge] for 1 turn.",
+    "desc": "(Support) [Instant] Gains [{+}Crit II] and [Ignore Dodge] for 1 turn.",
     "rangeTags": [
       "Unit"
     ],
@@ -43,6 +60,11 @@
     "name": "Air of Royalty",
     "type": "Reaction",
     "desc": "(Reaction) DMG taken from Melee attacks decreases by 30%."
+  },
+  {
+    "name": "Alacrity",
+    "type": "Skill",
+    "desc": "(Leader's Aura) For all \"Alacrity” allies in battle, increases ATK by 10%, DEF by 20%, and Crit by 15%."
   },
   {
     "name": "Alert Shot",
@@ -101,6 +123,17 @@
     "rangeImage": "melee-unit-r-1-3-hr-1-1-aoe"
   },
   {
+    "name": "Another Pint!",
+    "type": "Skill",
+    "desc": "(Healing) [Instant]. Rawiyah recovers 60% of lost HP and gains [Tipsy] for 2 turns.",
+    "rangeTags": [
+      "Unit"
+    ],
+    "cost": 1,
+    "cooldown": 3,
+    "rangeImage": "unit"
+  },
+  {
     "name": "Arm Bracers",
     "type": "Skill",
     "desc": "(Passive) When attacked from the [Side], increases DEF by 30%."
@@ -128,7 +161,7 @@
     "rangeImage": "ranged-unit-r-1-3-hr-8-6"
   },
   {
-    "name": "Armor- Piercing Strike (Melee)",
+    "name": "Armor-Piercing Strike (Melee)",
     "type": "Basic Attack",
     "desc": "(Basic Attack) Deals 100% physical DMG and inflicts [{-}P.DEF I] and [{-}M.DEF I] on the target, lasting for 2 turns.",
     "rangeTags": [
@@ -169,9 +202,78 @@
     "rangeImage": "ranged-unit-r-1-4-hr-5-3"
   },
   {
+    "name": "Arrow of Aeolus",
+    "type": "Skill",
+    "desc": "(Physical DMG) Single-target attack. LilyWill deals 60% DMG with [Curved Shot]. She deals Magical DMG equal to 40% of her P.ATK to all enemies within 1 tile around the target, inflicting 3 stacks of [Infection] if DMG is dealt",
+    "rangeTags": [
+      "Ranged",
+      "Unit"
+    ],
+    "cost": 2,
+    "cooldown": 3,
+    "rangeInfo": {
+      "Range": [
+        "2",
+        "3"
+      ],
+      "Height Range": [
+        "8",
+        "6"
+      ]
+    },
+    "rangeImage": "ranged-unit-r-2-3-hr-8-6"
+  },
+  {
+    "name": "Arrow of Aeolus - Gale Break",
+    "type": "Skill",
+    "desc": "(Physical DMG) Single-target attack. Lilywill deals 150% DMG, inflicts 2 stacks of [Infection], which immediately triggers the [Infection] effect. Before attacking, she gains [Highland] advantage.",
+    "rangeTags": [
+      "Ranged",
+      "Unit"
+    ],
+    "cost": 3,
+    "cooldown": 4,
+    "rangeInfo": {
+      "Range": [
+        "2",
+        "4"
+      ],
+      "Height Range": [
+        "8",
+        "8"
+      ]
+    },
+    "rangeImage": "ranged-unit-r-2-4-hr-8-8"
+  },
+  {
     "name": "Arrow of Ambush",
     "type": "Trait",
     "desc": "Increases ATK by 25% when attacking an enemy from the [side or behind]."
+  },
+  {
+    "name": "Arrow of Guardian Convallaria",
+    "type": "Skill",
+    "desc": "(Physical DMG) Performs [Alert] within a 3x4 area in the target direction. Deals 120% DMG and interrupts actions once an enemy enter this area.",
+    "rangeTags": [
+      "Ground"
+    ],
+    "cost": 1,
+    "cooldown": 4,
+    "rangeInfo": {
+      "Range": [
+        "1",
+        "4"
+      ],
+      "Height Range": [
+        "5",
+        "5"
+      ],
+      "Effect Height": [
+        "5",
+        "5"
+      ]
+    },
+    "rangeImage": "ground-r-1-4-hr-5-5-eh-5-5"
   },
   {
     "name": "Assault",
@@ -276,9 +378,19 @@
     "rangeImage": "ranged-unit-r-2-3-hr-5-3"
   },
   {
+    "name": "Barricade Fight",
+    "type": "Skill",
+    "desc": "(Passive) If there is any [Item] within 1 tile of the character, increases ATK by 15% and allows the character to move again by 2 tiles after initiating an Active Attack."
+  },
+  {
     "name": "Battle Fever",
     "type": "Skill",
     "desc": "(Passive) After initiating an Active Attack, the character takes 15% less DMG. Dealing a Crit DMG additionally decreases DMG taken by 25% for 1 turn."
+  },
+  {
+    "name": "Battle Flag of Convallaria",
+    "type": "Skill",
+    "desc": "(Leader's Aura) For all \"Sword of Convallaria\" allies in battle, increases ATK by 10% and DEF by 20%."
   },
   {
     "name": "Battle Flag of Iria",
@@ -340,6 +452,16 @@
       ]
     },
     "rangeImage": "unit-eh-2-2"
+  },
+  {
+    "name": "Block Counter",
+    "type": "Reaction",
+    "desc": "(Reaction) When receiving a melee attack from [front or side], there is a 100% chance to trigger [Block]. This leads to a [Strike Back] with [basic attack], dealing 70% physical DMG to the attacker. This effect can be activated 1 time per round."
+  },
+  {
+    "name": "Bottoms Up",
+    "type": "Trait",
+    "desc": "Increases Rawiyah's DMG by 16%. At the start of the turn or during a strike back, there is a 70% chance to recover 40% of her lost HP and gain [Tipsy]. This effect can be triggered up to 1 time per round."
   },
   {
     "name": "Brutebear Blood",
@@ -431,6 +553,11 @@
     "rangeImage": "unit"
   },
   {
+    "name": "Catching Fire",
+    "type": "Trait",
+    "desc": "Edda performs [Assisting Attack] against all enemies within 4 tiles of herself, dealing 30% physical DMG. The skill can be used up to 1 time per round."
+  },
+  {
     "name": "Charge Pursuit",
     "type": "Skill",
     "desc": "(Physical DMG) [Instant]. Charges at 1 enemy within a cross-shaped range around the character, dealing 30% DMG. Gains immunity to [Preempt].",
@@ -492,6 +619,11 @@
     "rangeImage": "melee-unit-r-1-1-hr-2-2"
   },
   {
+    "name": "Charged Bayonet",
+    "type": "Skill",
+    "desc": "(Passive) At the start of the turn, if the character is not within the enemy's [threat range], gains [Bayonet Charge]. When [Bayonet Charge] is active and the character lands a single-target attack on enemies with [The Hanged Men's Mark], increases DMG by 30% and gains 30% [Life Steal]."
+  },
+  {
     "name": "Charging Spear",
     "type": "Trait",
     "desc": "Increases HP and P.DEF by 15%. Increases ATK by an additional 15% if the character moves before attacking."
@@ -516,6 +648,28 @@
       ]
     },
     "rangeImage": "ranged-unit-r-2-3-hr-5-3"
+  },
+  {
+    "name": "Close Quarter Release",
+    "type": "Skill",
+    "desc": "(Physical DMG) Single-target attack. Nergal deals 110% DMG and knocks the target back by 4 tiles. Then, he deals 50% [AoE DMG] to all enemies within a 3x3 area in the target direction, and inflicts [{-}SPD I] for 1 turn.",
+    "rangeTags": [
+      "Melee",
+      "Unit"
+    ],
+    "cost": 3,
+    "cooldown": 5,
+    "rangeInfo": {
+      "Range": [
+        "1",
+        "1"
+      ],
+      "Height Range": [
+        "2",
+        "2"
+      ]
+    },
+    "rangeImage": "melee-unit-r-1-1-hr-2-2"
   },
   {
     "name": "Cloud-Piercing Arrow",
@@ -549,6 +703,22 @@
     "desc": "(Passive) For each ally within a 2-tile radius of the character, DEF increases by 10%, up to 40%."
   },
   {
+    "name": "Come On, Everybody!",
+    "type": "Skill",
+    "desc": "(Support) Maitha restores 20% HP and grants [{+}ATK I]and [{+}P.DEF I] to all allies within a 3-tile radius. She takes [physical attacks] from the enemy for allies within a 2-tile radius for 2 turns.",
+    "rangeTags": [
+      "Ground"
+    ],
+    "cost": 3,
+    "rangeInfo": {
+      "Effect Height": [
+        "2",
+        "2"
+      ]
+    },
+    "rangeImage": "ground-eh-2-2"
+  },
+  {
     "name": "Corruption",
     "type": "Skill",
     "desc": "(Passive) At the end of the turn, inflicts 2 random [Level 1 Attribute Debuffs] on 1 random enemy within a 3-tile radius of the character, lasting for 2 turns."
@@ -557,6 +727,16 @@
     "name": "Counterattack",
     "type": "Reaction",
     "desc": "(Reaction) When hit by an active attack from the [front or side], performs a basic attack to [Strike Back] if the attacker is within range, dealing 70% of basic attack's DMG. The effect can be activated up to 1 time per round."
+  },
+  {
+    "name": "Counterattack Mode",
+    "type": "Skill",
+    "desc": "(Support) Adds 20% of P.ATK to P.DEF and M.DEF, increases Strike Back DMG by 50%, gains [Preempt], and increases Strike Back Range by 2 tiles, lasting for 2 turns.",
+    "rangeTags": [
+      "Unit"
+    ],
+    "cooldown": 4,
+    "rangeImage": "unit"
   },
   {
     "name": "Counterattack Storm",
@@ -675,6 +855,12 @@
     "rangeImage": "unit-r-0-3-hr-2-2"
   },
   {
+    "name": "Critical Moment",
+    "type": "Reaction",
+    "desc": "(Reaction) When the character is [Dying], [Dodges] all single-target attacks for 1 turn. At the start of the turn, recovers 50% HP. CD: 7 turns.",
+    "cooldown": 7
+  },
+  {
     "name": "Critical Strike (Melee)",
     "type": "Basic Attack",
     "desc": "(Basic Attack) Deals 50% physical DMG 2 times and increases Crit by 15% before attacking.",
@@ -768,7 +954,7 @@
     "desc": "(Reaction) When hit by an active attack, the DMG taken is decreased by 8%. Upon receiving an active attack, inflicts [Vulnerable II] on the attacker for 2 turns."
   },
   {
-    "name": "Curved Shot",
+    "name": "Curved Shot (Curved)",
     "type": "Basic Attack",
     "desc": "(Basic Attack) Fires a [Curved Shot] which deals 85% Physical DMG.",
     "rangeTags": [
@@ -928,9 +1114,56 @@
     "rangeImage": "ranged-unit-r-1-3-hr-5-3"
   },
   {
+    "name": "Daybreak",
+    "type": "Skill",
+    "desc": "(Mixed DMG) Dantalion deals 40% physical DMG to all enemies in the target direction within a range of 3x2 tiles and inflicts [{x}Healing Received] for 2 turns. Another attack is then initiated which deals Magical DMG equal to 40% of his P.ATK and dispels 2 [Buffs].",
+    "rangeTags": [
+      "AoE",
+      "Ground"
+    ],
+    "cost": 2,
+    "cooldown": 2,
+    "rangeInfo": {
+      "Range": [
+        "1",
+        "2"
+      ],
+      "Height Range": [
+        "2",
+        "2"
+      ],
+      "Effect Height": [
+        "2",
+        "2"
+      ]
+    },
+    "rangeImage": "aoe-ground-r-1-2-hr-2-2-eh-2-2"
+  },
+  {
     "name": "Dazzling Light",
     "type": "Trait",
     "desc": "Gains [Block]. The character can also block [magical attacks]. P.ATK is increased by 9%."
+  },
+  {
+    "name": "Deadly Aim",
+    "type": "Skill",
+    "desc": "(Physical DMG) Single-target attack. Nungal prepares for 1 turn and then deals 160% DMG to the enemy, which ignores [Block]. When attacking enemies with [The Hanged Men's Mark], increases Crit by 60%. [The Hanged Men's Mark] is cleared after landing a Crit Hit.",
+    "rangeTags": [
+      "Unit"
+    ],
+    "cost": 4,
+    "cooldown": 2,
+    "rangeInfo": {
+      "Range": [
+        "3",
+        "5"
+      ],
+      "Height Range": [
+        "7",
+        "3"
+      ]
+    },
+    "rangeImage": "unit-r-3-5-hr-7-3"
   },
   {
     "name": "Dedication",
@@ -963,7 +1196,7 @@
     "desc": "(Reaction) When hit by an active Physical Attack, the DMG taken is decreased by 15%."
   },
   {
-    "name": "Defense (Ranged Attack)",
+    "name": "Defense (Ranged)",
     "type": "Reaction",
     "desc": "(Reaction) When hit by a ranged attack, the DMG taken is decreased by 25%."
   },
@@ -1074,7 +1307,7 @@
   {
     "name": "Devout Guard",
     "type": "Skill",
-    "desc": "(Healing) The character dispels 3 [debuffs], recovers 40% HP, and gains [{+}P.DEF II] and [ /A M.DEF II). The character takes attacks for all other allies within 2 tiles around the character and increases the [Trait] effect to 200%",
+    "desc": "(Healing) The character dispels 3 [debuffs], recovers 40% HP, and gains [{+}P.DEF II] and [ /A M.DEF II]. The character takes attacks for all other allies within 2 tiles around the character and increases the [Trait] effect to 200%",
     "rangeTags": [
       "Unit"
     ],
@@ -1090,26 +1323,6 @@
     "name": "Disdain",
     "type": "Trait",
     "desc": "Increases P.ATK by 9% and P.DEF by 9%. At the end of the turn, if the character is [Healthy] and within the foe's threat range, gains [Disdain]. Effect: Decreases DMG taken by 20% for 1 turn. Effect CD: 3 turns."
-  },
-  {
-    "name": "Dispelling Strike (Magic)",
-    "type": "Basic Attack",
-    "desc": "(Basic Attack) Deals 80% magical DMG and dispels 2 [buffs] on the target.",
-    "rangeTags": [
-      "Ranged",
-      "Unit"
-    ],
-    "rangeInfo": {
-      "Range": [
-        "1",
-        "2"
-      ],
-      "Height Range": [
-        "5",
-        "3"
-      ]
-    },
-    "rangeImage": "ranged-unit-r-1-2-hr-5-3"
   },
   {
     "name": "Dispelling Strike (Melee)",
@@ -1130,6 +1343,26 @@
       ]
     },
     "rangeImage": "melee-unit-r-1-1-hr-2-2"
+  },
+  {
+    "name": "Dispelling Strike (Ranged)",
+    "type": "Basic Attack",
+    "desc": "(Basic Attack) Deals 100% physical DMG and dispels 2 [buffs] on the target.",
+    "rangeTags": [
+      "Ranged",
+      "Unit"
+    ],
+    "rangeInfo": {
+      "Range": [
+        "2",
+        "3"
+      ],
+      "Height Range": [
+        "5",
+        "3"
+      ]
+    },
+    "rangeImage": "ranged-unit-r-2-3-hr-5-3"
   },
   {
     "name": "Divine Storm Axe",
@@ -1168,7 +1401,7 @@
     "rangeImage": "aoe-ground-r-3-4-hr-1-1-eh-2-2"
   },
   {
-    "name": "Dual Blade Strike",
+    "name": "Dual Blade Strike (Melee)",
     "type": "Basic Attack",
     "desc": "(Basic Attack) Deals 50% physical DMG 2 times.",
     "rangeTags": [
@@ -1267,7 +1500,7 @@
     "desc": "(Reaction) When hit by an active attack, the DMG taken is decreased by 8%. When [Injured], the DMG taken is decreased by 20%."
   },
   {
-    "name": "Energy Wave",
+    "name": "Energy Wave (Magic)",
     "type": "Basic Attack",
     "desc": "(Basic Attack) Deals 80% Magical DMG.",
     "rangeTags": [
@@ -1332,6 +1565,37 @@
     "rangeImage": "ground-r-1-2-hr-2-2-eh-2-2"
   },
   {
+    "name": "Execution Time",
+    "type": "Skill",
+    "desc": "(Physical DMG) Single-target attack. Garcia deals 120% DMG. She gains 1 stack of [Rotational Acceleration] when defeating the target. If she has 6 stacks of [Rotational Acceleration] before attacking, her DMG is increased by 45%.",
+    "rangeTags": [
+      "Melee",
+      "Unit"
+    ],
+    "cost": 2,
+    "rangeInfo": {
+      "Range": [
+        "1",
+        "1"
+      ],
+      "Height Range": [
+        "2",
+        "2"
+      ]
+    },
+    "rangeImage": "melee-unit-r-1-1-hr-2-2"
+  },
+  {
+    "name": "Executioner",
+    "type": "Trait",
+    "desc": "At the start of the turn, Garcia gains 1 stack of [Rotational Acceleration], up to 6 stacks. When reaching 3 stacks, increases Crit by 30%. At the start of the battle, she gains 1 stack of [Rotational Acceleration]."
+  },
+  {
+    "name": "Eye for an Eye",
+    "type": "Reaction",
+    "desc": "(Reaction) When Faycal is being attacked from the [front or side] by enemies who are not on adjacent tiles, he initiates a [Strike Back], dealing 100% DMG."
+  },
+  {
     "name": "Fair Duel",
     "type": "Skill",
     "desc": "(Physical DMG) Single-target attack. Deals 180% DMG. Before attacking, dispels all [debuffs] on the character and all [buffs] on the target.",
@@ -1362,6 +1626,47 @@
     "rangeImage": "unit"
   },
   {
+    "name": "Fast Cover",
+    "type": "Skill",
+    "desc": "(Support) [Instant] Nergal swaps positions with a targeted ally, granting both of them [Physical Shield] with value equal to 50% of his P.ATK. Nergal take [physical attacks] for all allies within 1 tile. All effects",
+    "rangeTags": [
+      "Unit"
+    ],
+    "cost": 2,
+    "cooldown": 2,
+    "rangeInfo": {
+      "Range": [
+        "1",
+        "3"
+      ],
+      "Height Range": [
+        "8",
+        "8"
+      ]
+    },
+    "rangeImage": "unit-r-1-3-hr-8-8"
+  },
+  {
+    "name": "Fatal Attack (Curved)",
+    "type": "Basic Attack",
+    "desc": "(Basic Attack) Fires a [Curved Shot] which deals 85% physical DMG and increases Crit DMG by 15%.",
+    "rangeTags": [
+      "Ranged",
+      "Unit"
+    ],
+    "rangeInfo": {
+      "Range": [
+        "2",
+        "3"
+      ],
+      "Height Range": [
+        "8",
+        "6"
+      ]
+    },
+    "rangeImage": "ranged-unit-r-2-3-hr-8-6"
+  },
+  {
     "name": "Fatal Attack (Melee)",
     "type": "Basic Attack",
     "desc": "(Basic Attack) Deals 100% physical DMG and increases Crit DMG by 15%.",
@@ -1380,6 +1685,36 @@
       ]
     },
     "rangeImage": "melee-unit-r-1-1-hr-2-2"
+  },
+  {
+    "name": "Fatal Attack (Ranged)",
+    "type": "Basic Attack",
+    "desc": "(Basic Attack) Deals 100% physical DMG and increases Crit DMG by 15%.",
+    "rangeTags": [
+      "Ranged",
+      "Unit"
+    ],
+    "rangeInfo": {
+      "Range": [
+        "2",
+        "3"
+      ],
+      "Height Range": [
+        "5",
+        "3"
+      ]
+    },
+    "rangeImage": "ranged-unit-r-2-3-hr-5-3"
+  },
+  {
+    "name": "Fatal Reaping",
+    "type": "Reaction",
+    "desc": "(Reaction) Performs [Assisting Attack] if any enemy within 3 tiles of a cross-shaped range around the character is [Dying] after being attacked by the character's allies. The Assisting Attack deals [Piercing DMG] equal to 50% of the targets' lost HP. The effect can be activated up to 1 time per round."
+  },
+  {
+    "name": "Faycal's Obsession",
+    "type": "Trait",
+    "desc": "Increases Faycal's ATK and DEF by 10%. Whenever he deals DMG, there is a 70% chance to inflict 1 random [Level 2 Debuff] to the target for 2 turns."
   },
   {
     "name": "Feverish Attack (Melee)",
@@ -1481,6 +1816,11 @@
       ]
     },
     "rangeImage": "unit-r-0-1-hr-2-2"
+  },
+  {
+    "name": "Flag of Justice",
+    "type": "Trait",
+    "desc": "Increases Gloria's ATK by 10%. When she loses [Flag Waving] aura, she gains [Potential Burst] for 2 turns. At the start of the battle, Gloria will auto-use [Longinus - Flag Waving] which grants [Flag Waving] aura."
   },
   {
     "name": "Flagellant",
@@ -1643,6 +1983,26 @@
     "rangeImage": "unit"
   },
   {
+    "name": "Fortification",
+    "type": "Skill",
+    "desc": "(Support) [Instant] skill. Summons a Box at the target tile.",
+    "rangeTags": [
+      "Ground"
+    ],
+    "cooldown": 4,
+    "rangeInfo": {
+      "Range": [
+        "1",
+        "1"
+      ],
+      "Height Range": [
+        "99",
+        "99"
+      ]
+    },
+    "rangeImage": "ground-r-1-1-hr-99-99"
+  },
+  {
     "name": "Frenzied Slash (Melee)",
     "type": "Basic Attack",
     "desc": "(Basic Attack) Deals 110% DMG. If the target is defeated, the character recovers 1 NRG.",
@@ -1677,6 +2037,28 @@
     "rangeImage": "unit"
   },
   {
+    "name": "Gale Breach",
+    "type": "Skill",
+    "desc": "(Physical DMG) [Instant] Rawiyah charges at 1 enemy within a cross-shaped range around her, dealing 30% DMG. Afterward, the skill switches to [Tropical Cyclone] for 2 turns. When she has [Tipsy], she inflicts [{x}Reaction Skills] on the target after the attack. This effect lasts for 2 turns.",
+    "rangeTags": [
+      "Melee",
+      "Unit"
+    ],
+    "cost": 1,
+    "cooldown": 3,
+    "rangeInfo": {
+      "Range": [
+        "1",
+        "3"
+      ],
+      "Height Range": [
+        "1",
+        "1"
+      ]
+    },
+    "rangeImage": "melee-unit-r-1-3-hr-1-1"
+  },
+  {
     "name": "Gale Dance",
     "type": "Skill",
     "desc": "(Physical DMG) Deals 75% [AoE DMG] to all enemies within a 2-tile radius around the character. Before attacking, gains [{+}Crit II] for 2 turns.",
@@ -1693,6 +2075,94 @@
       ]
     },
     "rangeImage": "aoe-ground-eh-2-2"
+  },
+  {
+    "name": "Gale Footwork",
+    "type": "Reaction",
+    "desc": "(Reaction) When attacked by a melee attack from [front or side], the character can interrupt the enemy's action, dealing 50% physical DMG and teleporting to the back of the closest ally within 3 tiles. Effect CD: 4 turns.",
+    "cooldown": 4
+  },
+  {
+    "name": "Gale Shooting (Ranged)",
+    "type": "Basic Attack",
+    "desc": "(Basic Attack) Single-target attack. LilyWill deals 120% Physical DMG.",
+    "rangeTags": [
+      "Ranged",
+      "Unit"
+    ],
+    "rangeInfo": {
+      "Range": [
+        "2",
+        "3"
+      ],
+      "Height Range": [
+        "5",
+        "3"
+      ]
+    },
+    "rangeImage": "ranged-unit-r-2-3-hr-5-3"
+  },
+  {
+    "name": "Gale Spin Attack",
+    "type": "Skill",
+    "desc": "(Physical DMG) Rawiyah deals 50% [AoE DMG] to all enemies withina 2-tile radius around her. After dealing DMG, inflicts [{-}P.DEF II] on the target for 2 turns. Subsequent attacks deal an additional 50% [AoE DMG].",
+    "rangeTags": [
+      "AoE",
+      "Unit"
+    ],
+    "cost": 4,
+    "rangeInfo": {
+      "Effect Height": [
+        "2",
+        "2"
+      ]
+    },
+    "rangeImage": "aoe-unit-eh-2-2"
+  },
+  {
+    "name": "Gale-Billow Volley",
+    "type": "Skill",
+    "desc": "(Physical DMG) Faycal deals 5 instances of 60% [AoE DMG] to random enemies within 2 tiles. DMG he deals to the same target repeatedly will be decreased by 50%.",
+    "rangeTags": [
+      "AoE",
+      "Unit"
+    ],
+    "cost": 4,
+    "rangeInfo": {
+      "Range": [
+        "3",
+        "4"
+      ],
+      "Height Range": [
+        "8",
+        "6"
+      ],
+      "Effect Height": [
+        "2",
+        "2"
+      ]
+    },
+    "rangeImage": "aoe-unit-r-3-4-hr-8-6-eh-2-2"
+  },
+  {
+    "name": "Gash (Melee)",
+    "type": "Basic Attack",
+    "desc": "(Basic Attack) Single-target attack. Deals 85% physical DMG and knocks the target back by 2 tiles.",
+    "rangeTags": [
+      "Melee",
+      "Unit"
+    ],
+    "rangeInfo": {
+      "Range": [
+        "1",
+        "1"
+      ],
+      "Height Range": [
+        "2",
+        "2"
+      ]
+    },
+    "rangeImage": "melee-unit-r-1-1-hr-2-2"
   },
   {
     "name": "Global Guard",
@@ -1715,10 +2185,32 @@
     "desc": "(Passive) Takes [physical attacks] for all other allies within a 2-tile radius of the character. When triggered, DEF is increased by 20%. Can be activated up to 1 time per round."
   },
   {
+    "name": "Guardian's Heart",
+    "type": "Reaction",
+    "desc": "(Reaction) Takes [P.ATK] for all other allies within 1 tile of the character and performs a [Strike Back] on the attacker, dealing 70% physical DMG and knocking them back by 1 tile. This effect can be triggered up to 1 time per round."
+  },
+  {
     "name": "Guerrilla",
     "type": "Skill",
     "desc": "(Passive) ATK increases by 5%. After attacking, move again by 2 tiles. CD: 2 turns.",
     "cooldown": 2
+  },
+  {
+    "name": "Guiding Gleam",
+    "type": "Skill",
+    "desc": "(Support) Grants all allies within 3 tiles of Edda [{+}DMG III], [{+}M.DEF II], and [{+}Move I], for 3 turns. She dispels [Disruption] from the targets.",
+    "rangeTags": [
+      "Unit"
+    ],
+    "cost": 1,
+    "cooldown": 4,
+    "rangeInfo": {
+      "Effect Height": [
+        "2",
+        "2"
+      ]
+    },
+    "rangeImage": "unit-eh-2-2"
   },
   {
     "name": "Hardening",
@@ -1751,6 +2243,11 @@
     "rangeImage": "unit-r-0-2-hr-8-8"
   },
   {
+    "name": "Heart of Alert",
+    "type": "Skill",
+    "desc": "(Passive) When it is not the character's turn, Increases Crit by 45% additionally and Crit DMG by 30%."
+  },
+  {
     "name": "Heavy Armor",
     "type": "Skill",
     "desc": "(Passive) At the start of the battle, gains a [Physical Shield] with value equal to 25% of HP. This effect cannot be dispelled."
@@ -1775,6 +2272,11 @@
       ]
     },
     "rangeImage": "melee-unit-r-1-1-hr-2-2"
+  },
+  {
+    "name": "Hidden Executioner",
+    "type": "Skill",
+    "desc": "(Passive) If there is no ally within 1 tile of the target before attacking, inflicts [Isolate] and [{x}Dodge] on the target. The effects last for 2 turns and can be activated up to 1 time per round."
   },
   {
     "name": "Hidden Thorn (Melee)",
@@ -2035,7 +2537,7 @@
   {
     "name": "Ice of Despair",
     "type": "Trait",
-    "desc": "M.ATK increases by 12%. When attacked and in the [Injured] state, gains a [physical shield) equal to 20% of the character's HP. Effect CD: 1 turn."
+    "desc": "M.ATK increases by 12%. When attacked and in the [Injured] state, gains a [physical shield] equal to 20% of the character's HP. Effect CD: 1 turn."
   },
   {
     "name": "Ice of Sanctuary",
@@ -2120,6 +2622,26 @@
     "desc": "(Passive) After a [basic attack], inflicts 2 stacks of [Infection] on the target."
   },
   {
+    "name": "Infectious Attack (Curved)",
+    "type": "Basic Attack",
+    "desc": "(Basic Attack) Fires a [Curved Shot] which deals 85% physical DMG and inflicts 1 stack of [Infection] on the target.",
+    "rangeTags": [
+      "Ranged",
+      "Unit"
+    ],
+    "rangeInfo": {
+      "Range": [
+        "2",
+        "3"
+      ],
+      "Height Range": [
+        "8",
+        "6"
+      ]
+    },
+    "rangeImage": "ranged-unit-r-2-3-hr-8-6"
+  },
+  {
     "name": "Insight",
     "type": "Skill",
     "desc": "(Passive) P.ATK increases by 8%. Before attacking, dispels 1 [Defense Attribute Buff] from the target."
@@ -2164,26 +2686,6 @@
     "name": "Intuition",
     "type": "Skill",
     "desc": "(Passive) Takes 20% less [ranged DMG]."
-  },
-  {
-    "name": "Invigorating Strike (Magic)",
-    "type": "Basic Attack",
-    "desc": "(Basic Attack) Deals 80% magical DMG and additionally recovers 1 NRG.",
-    "rangeTags": [
-      "Ranged",
-      "Unit"
-    ],
-    "rangeInfo": {
-      "Range": [
-        "1",
-        "2"
-      ],
-      "Height Range": [
-        "5",
-        "3"
-      ]
-    },
-    "rangeImage": "ranged-unit-r-1-2-hr-5-3"
   },
   {
     "name": "Invigorating Strike (Melee)",
@@ -2353,6 +2855,56 @@
     "rangeImage": "melee-unit-r-1-1-hr-2-2"
   },
   {
+    "name": "Lance of Justice",
+    "type": "Basic Attack",
+    "desc": "(Basic Attack) Gloria deals 70% physical DMG to all enemies within 1 tile of the target. If there is no [Flag Waving] aura on Gloria, the skill switches to [Sword of Justice].",
+    "rangeTags": [
+      "AoE",
+      "Unit"
+    ],
+    "rangeInfo": {
+      "Range": [
+        "1",
+        "1"
+      ],
+      "Height Range": [
+        "2",
+        "2"
+      ],
+      "Effect Height": [
+        "2",
+        "2"
+      ]
+    },
+    "rangeImage": "aoe-unit-r-1-1-hr-2-2-eh-2-2"
+  },
+  {
+    "name": "Lance of Longinus",
+    "type": "Skill",
+    "desc": "(Physical DMG) Gloria deals 80% [AoE DMG] to all enemies within 2 tiles around the target [empty tile]. Summons a [Flag] at the cost of her [Flag Waving] aura. If there is no [Flag Waving] aura on Gloria, the skill switches to [Longinus - Flag Waving].",
+    "rangeTags": [
+      "AoE",
+      "Ground"
+    ],
+    "cost": 1,
+    "cooldown": 4,
+    "rangeInfo": {
+      "Range": [
+        "2",
+        "3"
+      ],
+      "Height Range": [
+        "4",
+        "th"
+      ],
+      "Effect Height": [
+        "2",
+        "2"
+      ]
+    },
+    "rangeImage": "aoe-ground-r-2-3-hr-4-th-eh-2-2"
+  },
+  {
     "name": "Last Stand",
     "type": "Skill",
     "desc": "(Passive) When [Injured], increases DEF by 20%."
@@ -2438,14 +2990,83 @@
     "desc": "(Passive) Increases SPD by 50 points. Increases Crit by 50% if moved more than 3 tiles before attacking."
   },
   {
+    "name": "Lock-On",
+    "type": "Skill",
+    "desc": "(Passive) At the start of the turn, inflicts [{-}P.DEF II] on the enemy with the highest P.ATK within a 6-tile radius around the character for 1 turn."
+  },
+  {
     "name": "Lone Ranger",
     "type": "Skill",
     "desc": "(Passive) When there are no allies within 2 tiles around the character, ATK and DEF increase by 8%, and Crit increases by 10%."
   },
   {
+    "name": "Longinus - Brilliance",
+    "type": "Skill",
+    "desc": "(Support) Gloria grants all allies within 3 tiles of her [ /A ATK I] and [DMG Reduction II] for 2 turns, and restores 1 NRG. If there is no [Flag Waving] aura on Gloria, the skill switches to [Sword - Full Moon].",
+    "rangeTags": [
+      "Unit"
+    ],
+    "cooldown": 4,
+    "rangeInfo": {
+      "Effect Height": [
+        "2",
+        "2"
+      ]
+    },
+    "rangeImage": "unit-eh-2-2"
+  },
+  {
+    "name": "Longinus - Flag Waving",
+    "type": "Skill",
+    "desc": "(Support) [Instant]. Grants [{+}Move I] to all other allies within 3 tiles of the character for 2 turns. Grants the character [Flag Waving] aura, and switches the skill to [Lance of Longinus].",
+    "rangeTags": [
+      "Ground"
+    ],
+    "cost": 1,
+    "cooldown": 2,
+    "rangeInfo": {
+      "Effect Height": [
+        "2",
+        "2"
+      ]
+    },
+    "rangeImage": "ground-eh-2-2"
+  },
+  {
+    "name": "Longinus - Thrust",
+    "type": "Skill",
+    "desc": "(Physical DMG) Gloria selects 1 enemy within a cross-shaped range from herself, charging at them, dealing 120% DMG and knocking the enemy back by 2 tiles. If there is no [Flag Waving] aura on Gloria, the skill switches to [Sword - Gale].",
+    "rangeTags": [
+      "Melee",
+      "Unit"
+    ],
+    "cost": 2,
+    "rangeInfo": {
+      "Range": [
+        "1",
+        "3"
+      ],
+      "Height Range": [
+        "1",
+        "1"
+      ]
+    },
+    "rangeImage": "melee-unit-r-1-3-hr-1-1"
+  },
+  {
     "name": "Love Wings",
     "type": "Trait",
     "desc": "Increases M.ATK by 15% and the range of [Healing Skills] by 1 tile."
+  },
+  {
+    "name": "Luxite Crossbow",
+    "type": "Trait",
+    "desc": "Changes Nungal's [physical DMG] dealt into [magical DMG). For each 1 tile between her and the target (Distance for adjacent tiles counts as 0), DMG increases by 3%, up to 30%. If Nungal does not move before attacking, increases the maximum range by 1 tile."
+  },
+  {
+    "name": "Luxite Gauntlet",
+    "type": "Trait",
+    "desc": "Nergal possesses [Block]. At the end of the turn, he gains [Shield Charge]. After performing a [block], he gains [Bayonet Charge]."
   },
   {
     "name": "Luxite Shrapnel",
@@ -2484,6 +3105,50 @@
     "desc": "Magical DMG taken is decreased by 20%. Before taking Active Attacks launched by enemies within 3 tiles around the character from the [front or side], performs [Preempt], dealing [Piercing DMG] equal to 60% of M.DEF."
   },
   {
+    "name": "Maitha's Charge",
+    "type": "Skill",
+    "desc": "(Physical DMG) Maitha charges at 1 enemy within a cross-shaped range around her, dealing 130% DMG and knocking the target back by 2 tiles.",
+    "rangeTags": [
+      "Melee",
+      "Unit"
+    ],
+    "cost": 1,
+    "cooldown": 5,
+    "rangeInfo": {
+      "Range": [
+        "1",
+        "3"
+      ],
+      "Height Range": [
+        "1",
+        "1"
+      ]
+    },
+    "rangeImage": "melee-unit-r-1-3-hr-1-1"
+  },
+  {
+    "name": "Maitha's Combo",
+    "type": "Skill",
+    "desc": "(Physical DMG) Maitha deals 20% DMG 1 time, 50% DMG 3 times, and she knocks the target back by 2 tiles.",
+    "rangeTags": [
+      "Melee",
+      "Unit"
+    ],
+    "cost": 2,
+    "cooldown": 4,
+    "rangeInfo": {
+      "Range": [
+        "1",
+        "1"
+      ],
+      "Height Range": [
+        "2",
+        "2"
+      ]
+    },
+    "rangeImage": "melee-unit-r-1-1-hr-2-2"
+  },
+  {
     "name": "Maneuver",
     "type": "Skill",
     "desc": "(Passive) After initiating an Active Attack, the character can move again. The distance depends on the remaining Movement."
@@ -2510,6 +3175,55 @@
     "rangeImage": "melee-unit-r-1-1-hr-2-2"
   },
   {
+    "name": "Mark Illumination",
+    "type": "Skill",
+    "desc": "(Debuff) [Instant] Nergal inflicts [The Hanged Men's Mark], [{-}ATK II], and [Vulnerable IT] on all enemies in a straight line of 5 tiles in the target direction. The effects last for 2 turns.",
+    "rangeTags": [
+      "Ground"
+    ],
+    "cooldown": 4,
+    "rangeInfo": {
+      "Range": [
+        "1",
+        "5"
+      ],
+      "Height Range": [
+        "2",
+        "2"
+      ],
+      "Effect Height": [
+        "2",
+        "2"
+      ]
+    },
+    "rangeImage": "ground-r-1-5-hr-2-2-eh-2-2"
+  },
+  {
+    "name": "Marking Bullet (Ranged)",
+    "type": "Basic Attack",
+    "desc": "(Basic Attack) Single-target attack. Nungal deals 85% physical DMG and inflicts [{-}Move I) and [The Hanged Men's Mark] for 2 turns.",
+    "rangeTags": [
+      "Ranged",
+      "Unit"
+    ],
+    "rangeInfo": {
+      "Range": [
+        "2",
+        "3"
+      ],
+      "Height Range": [
+        "5",
+        "3"
+      ]
+    },
+    "rangeImage": "ranged-unit-r-2-3-hr-5-3"
+  },
+  {
+    "name": "Marksman",
+    "type": "Skill",
+    "desc": "(Passive) All skills ignore [Obstinate]. Increases ATK by 12% and inflicts [{x}Assist] on the target after the attack."
+  },
+  {
     "name": "Mask",
     "type": "Skill",
     "desc": "(Healing) Col dispels 2 debuffs, recovers 25% HP, and she gains [Invisibility] and [{+}Crit V] for 1 turn.",
@@ -2524,26 +3238,6 @@
     "name": "Melee Archer",
     "type": "Skill",
     "desc": "(Passive) [Basic Attack] can target enemies adjacent tothe character. When attacking enemies adjacent to the character, ATK is increased by 15%."
-  },
-  {
-    "name": "Merciful Strike (Magic)",
-    "type": "Basic Attack",
-    "desc": "(Basic Attack) Deals 80% magical DMG and increases the effect of the next healing skill by 15%, lasting for 2 turns.",
-    "rangeTags": [
-      "Ranged",
-      "Unit"
-    ],
-    "rangeInfo": {
-      "Range": [
-        "1",
-        "2"
-      ],
-      "Height Range": [
-        "5",
-        "3"
-      ]
-    },
-    "rangeImage": "ranged-unit-r-1-2-hr-5-3"
   },
   {
     "name": "Merciful Strike (Melee)",
@@ -2569,6 +3263,15 @@
     "name": "Mountain Tribes",
     "type": "Skill",
     "desc": "(Passive) When the character is [Unharmed], increases Movement by 1 tile. If the character attacks from [Highland] or moves from one tile to another with a height difference of more than 2 tiles, increases the DMG by 20%."
+  },
+  {
+    "name": "Moving Stance",
+    "type": "Skill",
+    "desc": "(Support) Removes [Sniping Stance] from Nungal and she gains [{+}SPD II] for 1 turn. Nungal can move again.",
+    "rangeTags": [
+      "Unit"
+    ],
+    "rangeImage": "unit"
   },
   {
     "name": "NRG Recovery",
@@ -2622,6 +3325,26 @@
     "name": "Omen of Death",
     "type": "Skill",
     "desc": "(Passive) Gains [Feverish Beast] when a character is defeated in battle, lasting for 3 turns. Recovers 2 NRG when the character defeats an enemy."
+  },
+  {
+    "name": "Painful Cutting (Melee)",
+    "type": "Basic Attack",
+    "desc": "(Basic Attack) Single-target attack. Garcia deals 33% physical DMG 3 times. When used against an [Injured] target, Crit is increased by 25%.",
+    "rangeTags": [
+      "Melee",
+      "Unit"
+    ],
+    "rangeInfo": {
+      "Range": [
+        "1",
+        "1"
+      ],
+      "Height Range": [
+        "2",
+        "2"
+      ]
+    },
+    "rangeImage": "melee-unit-r-1-1-hr-2-2"
   },
   {
     "name": "Painkiller",
@@ -2698,6 +3421,27 @@
     "name": "Physical Reflection",
     "type": "Reaction",
     "desc": "(Reaction) When hit by an active Physical Attack, the DMG taken is decreased by 4%, and gains [Damage Reflect IT]."
+  },
+  {
+    "name": "Piercing Bash",
+    "type": "Skill",
+    "desc": "(Physical DMG) Single-target attack. Deals 130% DMG. Before attacking, the character gains [Armor Piercing].",
+    "rangeTags": [
+      "Melee",
+      "Unit"
+    ],
+    "cooldown": 3,
+    "rangeInfo": {
+      "Range": [
+        "1",
+        "1"
+      ],
+      "Height Range": [
+        "2",
+        "2"
+      ]
+    },
+    "rangeImage": "melee-unit-r-1-1-hr-2-2"
   },
   {
     "name": "Place Trap",
@@ -2805,6 +3549,27 @@
     "rangeImage": "ranged-unit-r-1-2-hr-5-3"
   },
   {
+    "name": "Precise Shot",
+    "type": "Skill",
+    "desc": "(Physical DMG) Single-target attack. Deals 130% DMG. Before attacking, inflicts [{x}Dodge] on the target, lasting for 1 turn.",
+    "rangeTags": [
+      "Ranged",
+      "Unit"
+    ],
+    "cooldown": 3,
+    "rangeInfo": {
+      "Range": [
+        "1",
+        "3"
+      ],
+      "Height Range": [
+        "5",
+        "3"
+      ]
+    },
+    "rangeImage": "ranged-unit-r-1-3-hr-5-3"
+  },
+  {
     "name": "Preempt",
     "type": "Reaction",
     "desc": "(Reaction) [Strike Back] when taking an active attack from [front or side], dealing 70% DMG to the attacker. The effect can be activated up to 1 time per round."
@@ -2845,6 +3610,16 @@
     "desc": "(Passive) When [Healthy], performs [Pursuit] after a basic attack, dealing 20% physical DMG and knocking the target back by 1 tile."
   },
   {
+    "name": "Quick Reload",
+    "type": "Skill",
+    "desc": "(Support) [Instant] Nungal recovers 3 NRG and reduces skill CD by 1 turn. For 3 turns, [Deadly Aim] does not need to prepare for 1 turn.",
+    "rangeTags": [
+      "Unit"
+    ],
+    "cooldown": 4,
+    "rangeImage": "unit"
+  },
+  {
     "name": "Rage",
     "type": "Reaction",
     "desc": "(Reaction) When hit by an active attack, the DMG taken is decreased by 8%. After being attacked, the character gains [{+}DMG II] for 3 turns."
@@ -2853,6 +3628,26 @@
     "name": "Raiding Strike",
     "type": "Trait",
     "desc": "Gains [Jump]. When attacking an [Injured] enemy, increases Crit by 20%."
+  },
+  {
+    "name": "Rapid Fire (Ranged)",
+    "type": "Basic Attack",
+    "desc": "(Basic Attack) Single-target attack. Performs 2 consecutive attacks, each dealing 55% Physical DMG.",
+    "rangeTags": [
+      "Ranged",
+      "Unit"
+    ],
+    "rangeInfo": {
+      "Range": [
+        "2",
+        "3"
+      ],
+      "Height Range": [
+        "5",
+        "3"
+      ]
+    },
+    "rangeImage": "ranged-unit-r-2-3-hr-5-3"
   },
   {
     "name": "Regenerate",
@@ -2868,6 +3663,11 @@
     "name": "Resolve",
     "type": "Skill",
     "desc": "(Passive) Immediately recovers 5% HP when the character is defeated. Can be activated up to 1 time per battle."
+  },
+  {
+    "name": "Resonance of Blood",
+    "type": "Skill",
+    "desc": "(Leader's Aura) For all \"Vlder\" allies in battle, increases ATK by 10%, DEF by 20%, and Movement by 1 tile."
   },
   {
     "name": "Restraining Shot",
@@ -2966,6 +3766,11 @@
     "rangeImage": "ranged-unit-r-1-2-hr-5-3"
   },
   {
+    "name": "Screw Off!",
+    "type": "Reaction",
+    "desc": "(Reaction) When Rawiyah is hit by an active attack, she performs a [Strike Back], dealing 70% physical DMG to the enemy. When she has [Tipsy], she knocks the enemy back by 2 tiles. This effect can be triggered up to 1 time per round."
+  },
+  {
     "name": "Sealing Attack (Magic)",
     "type": "Basic Attack",
     "desc": "(Basic Attack) Deals 80% magical DMG and inflicts [{x}Passive Skills] on [Injured] targets before attacking, lasting for 2 turns.",
@@ -2984,6 +3789,31 @@
       ]
     },
     "rangeImage": "ranged-unit-r-1-2-hr-5-3"
+  },
+  {
+    "name": "Sealing Attack (Melee)",
+    "type": "Basic Attack",
+    "desc": "(Basic Attack) Deals 100% physical DMG and inflicts [{x}Passive Skills] on [Injured] targets before attacking, lasting for 2 turns.",
+    "rangeTags": [
+      "Melee",
+      "Unit"
+    ],
+    "rangeInfo": {
+      "Range": [
+        "1",
+        "1"
+      ],
+      "Height Range": [
+        "2",
+        "2"
+      ]
+    },
+    "rangeImage": "melee-unit-r-1-1-hr-2-2"
+  },
+  {
+    "name": "Sense of Purpose",
+    "type": "Skill",
+    "desc": "(Passive) When attacking enemies who have [The Hanged Men's Mark], increases Crit by 30% and Crit DMG by 30%. Additionally, recovers 1 NRG when landing a Crit Hit."
   },
   {
     "name": "Shadow Gait",
@@ -3056,6 +3886,16 @@
     "desc": "(Passive) When performing an active attack, DMG increases by 10%. When the character strikes back, DMG increases by 30%."
   },
   {
+    "name": "Shattering Arrow",
+    "type": "Skill",
+    "desc": "(Passive) [Basic Attack] ignores 40% of the target's DEF."
+  },
+  {
+    "name": "Shelter Advantage",
+    "type": "Reaction",
+    "desc": "(Reaction) Decreases the DMG taken by 40% if there is any [Item] within 1 tile around the character."
+  },
+  {
     "name": "Shield",
     "type": "Skill",
     "desc": "(Passive) At the start of the battle, gains a [Physical Shield] with value equal to 15% of HP. This effect cannot be dispelled."
@@ -3064,6 +3904,32 @@
     "name": "Shield Break",
     "type": "Skill",
     "desc": "(Passive) Increases ATK by 15% when attacking enemies with a [shield]."
+  },
+  {
+    "name": "Shield Break - Enhanced",
+    "type": "Skill",
+    "desc": "(Passive) Increases ATK by 30% and ignores 40% of the target's DEF when attacking enemies with a (Shield)."
+  },
+  {
+    "name": "Shield Break Shot",
+    "type": "Skill",
+    "desc": "(Physical DMG) Deals 135% DMG to an enemy within the cross-shaped range around the character. Gains [Shield Break IV] before attacking.",
+    "rangeTags": [
+      "Ranged",
+      "Unit"
+    ],
+    "cost": 2,
+    "rangeInfo": {
+      "Range": [
+        "1",
+        "3"
+      ],
+      "Height Range": [
+        "5",
+        "3"
+      ]
+    },
+    "rangeImage": "ranged-unit-r-1-3-hr-5-3"
   },
   {
     "name": "Shield of Comrade",
@@ -3099,6 +3965,26 @@
       ]
     },
     "rangeImage": "melee-unit-r-1-1-hr-2-2"
+  },
+  {
+    "name": "Shield-Break Attack (Ranged)",
+    "type": "Basic Attack",
+    "desc": "(Basic Attack) Deals 100% physical DMG and gains [Shield Break I] before attacking.",
+    "rangeTags": [
+      "Ranged",
+      "Unit"
+    ],
+    "rangeInfo": {
+      "Range": [
+        "2",
+        "3"
+      ],
+      "Height Range": [
+        "5",
+        "3"
+      ]
+    },
+    "rangeImage": "ranged-unit-r-2-3-hr-5-3"
   },
   {
     "name": "Shieldbreak Jab",
@@ -3173,6 +4059,26 @@
     "rangeImage": "ranged-unit-r-1-2-hr-5-3"
   },
   {
+    "name": "Silencing Attack (Melee)",
+    "type": "Basic Attack",
+    "desc": "(Basic Attack) Deals 100% physical DMG and inflicts [{x}Active Skills] on [Injured] targets before attacking, lasting for 2 turns.",
+    "rangeTags": [
+      "Melee",
+      "Unit"
+    ],
+    "rangeInfo": {
+      "Range": [
+        "1",
+        "1"
+      ],
+      "Height Range": [
+        "2",
+        "2"
+      ]
+    },
+    "rangeImage": "melee-unit-r-1-1-hr-2-2"
+  },
+  {
     "name": "Slash",
     "type": "Basic Attack",
     "desc": "(Basic Attack) Deals 100% Physical DMG.",
@@ -3191,6 +4097,34 @@
       ]
     },
     "rangeImage": "melee-unit-r-1-1-hr-2-2"
+  },
+  {
+    "name": "Sniper's Intuition",
+    "type": "Reaction",
+    "desc": "(Reaction) Decreases the [ranged DMG] taken by 20%. At the start of the turn, if the character is within the enemy's [threat range], gains [{+}Move II] for 1 turn. CD: 3 turns.",
+    "cooldown": 3
+  },
+  {
+    "name": "Sniping Stance",
+    "type": "Skill",
+    "desc": "(Support) [Instant] Nungal gains [Sniping Stance] and her skill switches to [Moving Stance].",
+    "rangeTags": [
+      "Unit"
+    ],
+    "cost": 1,
+    "cooldown": 3,
+    "rangeInfo": {
+      "Effect Height": [
+        "2",
+        "2"
+      ]
+    },
+    "rangeImage": "unit-eh-2-2"
+  },
+  {
+    "name": "Solemnity",
+    "type": "Skill",
+    "desc": "(Aura) Decreases ATK of all enemies within the character's 2-tile radius by 10%."
   },
   {
     "name": "Soul Mate",
@@ -3230,9 +4164,51 @@
     "desc": "(Reaction) When hit by an active attack, the DMG taken is decreased by 10%. When receiving an active melee attack, performs a [Strike Back], dealing [Piercing DMG] to the attacker equal to 50% of the character's P.DEF."
   },
   {
+    "name": "Spinning Blade",
+    "type": "Skill",
+    "desc": "(Physical DMG) [Instant] Garcia selects 1 enemy within a cross-shaped range around her and drags them to her side, dealing 70% DMG and recovering 2 NRG when defeating any target.",
+    "rangeTags": [
+      "Ranged",
+      "Unit"
+    ],
+    "cost": 3,
+    "rangeInfo": {
+      "Range": [
+        "1",
+        "3"
+      ],
+      "Height Range": [
+        "2",
+        "2"
+      ]
+    },
+    "rangeImage": "ranged-unit-r-1-3-hr-2-2"
+  },
+  {
     "name": "Storm Counter",
     "type": "Reaction",
     "desc": "(Reaction) When attacked by an enemy from the [front or side], reduces DMG taken by 8% and performs [Strike Back], dealing 45% physical DMG to all enemies within 1 tile of the character. Can be activated up to 1 time per round."
+  },
+  {
+    "name": "Storm Sniping",
+    "type": "Skill",
+    "desc": "(Physical DMG) Deals 120% DMG to 1 enemy within a cross-shaped range around the character. For each tile between the character and the target (Distance for Adjacent Tiles counts as 0), deals 10% more DMG.",
+    "rangeTags": [
+      "Ranged",
+      "Unit"
+    ],
+    "cost": 4,
+    "rangeInfo": {
+      "Range": [
+        "1",
+        "5"
+      ],
+      "Height Range": [
+        "5",
+        "3"
+      ]
+    },
+    "rangeImage": "ranged-unit-r-1-5-hr-5-3"
   },
   {
     "name": "Storm Trample",
@@ -3267,7 +4243,27 @@
     "rangeImage": "melee-unit-r-1-3-hr-1-1"
   },
   {
-    "name": "Straight Shot",
+    "name": "Straight Shot (Ranged)",
+    "type": "Basic Attack",
+    "desc": "(Basic Attack) Deals 100% Physical DMG",
+    "rangeTags": [
+      "Ranged",
+      "Unit"
+    ],
+    "rangeInfo": {
+      "Range": [
+        "2",
+        "3"
+      ],
+      "Height Range": [
+        "5",
+        "3"
+      ]
+    },
+    "rangeImage": "ranged-unit-r-2-3-hr-5-3"
+  },
+  {
+    "name": "Straight Shot (Ranged)",
     "type": "Basic Attack",
     "desc": "(Basic Attack) Deals 100% Physical DMG.",
     "rangeTags": [
@@ -3339,6 +4335,11 @@
     "desc": "(Passive) When [Dying], increases Movement by 2 tiles."
   },
   {
+    "name": "Survival Master",
+    "type": "Reaction",
+    "desc": "(Reaction) When hit by an active attack, the DMG taken is decreased by 8%, and [Environmental DMG] taken is decreased by 70%."
+  },
+  {
     "name": "Survivalist",
     "type": "Skill",
     "desc": "(Passive) If the character is [Dying] after being attacked, recovers 25% HP. Can be activated up to 1 time per round."
@@ -3369,9 +4370,100 @@
     "rangeImage": "aoe-ground-r-1-2-hr-2-2-eh-2-2"
   },
   {
+    "name": "Sword - Full Moon",
+    "type": "Skill",
+    "desc": "(Physical DMG) Deals 90% AoE DMG to all enemies within 2 tiles of the character. If the target is [Injured], deals an additional 30% DMG. After casting the skill, gains [DMG Reduction II] for 2 turns. When having [Flag Waving] aura, the skill switches to [Longinus - Brilliance].",
+    "rangeTags": [
+      "AoE",
+      "Ground"
+    ],
+    "cost": 3,
+    "rangeInfo": {
+      "Effect Height": [
+        "2",
+        "2"
+      ]
+    },
+    "rangeImage": "aoe-ground-eh-2-2"
+  },
+  {
+    "name": "Sword - Gale",
+    "type": "Skill",
+    "desc": "(Physical DMG) Gloria selects 1 enemy within a cross-shaped range of herself, charging at them and dealing 120% DMG. For each tile Gloria moves, the DMG increases by 10%, up to 50% upon attack. If Gloria has a [Flag Waving] aura, the skill switches to [Longinus - Thrust].",
+    "rangeTags": [
+      "Melee",
+      "Unit"
+    ],
+    "cooldown": 4,
+    "rangeInfo": {
+      "Range": [
+        "1",
+        "2"
+      ],
+      "Height Range": [
+        "1",
+        "1"
+      ]
+    },
+    "rangeImage": "melee-unit-r-1-2-hr-1-1"
+  },
+  {
+    "name": "Sword of Convallaria",
+    "type": "Skill",
+    "desc": "(Leader's Aura) For all \"Sword of Convallaria\" allies in battle, increases ATK by 10%, DEF by 20%, and DMG dealt by 8%, and decreases their DMG taken by 8%."
+  },
+  {
+    "name": "Sword of Justice (Melee)",
+    "type": "Basic Attack",
+    "desc": "(Basic Attack) Single-target attack. Gloria deals 100% Physical DMG. When she attacks from the [front], increases DMG dealt to 130%. When [Flag Waving] aura is activated, the skill switches to [Lance of Justice].",
+    "rangeTags": [
+      "Melee",
+      "Unit"
+    ],
+    "rangeInfo": {
+      "Range": [
+        "1",
+        "1"
+      ],
+      "Height Range": [
+        "2",
+        "2"
+      ]
+    },
+    "rangeImage": "melee-unit-r-1-1-hr-2-2"
+  },
+  {
+    "name": "Take Arms!",
+    "type": "Skill",
+    "desc": "(Support) Other allies within 4 tiles of Edda restore 1 NRG. When she performs an [Assisting Attack], her DMG increases by 130%. Increases the maximum number of times the effect can be triggered per turn by 2. The effect lasts for 1 turn.",
+    "rangeTags": [
+      "Unit"
+    ],
+    "cost": 3,
+    "cooldown": 4,
+    "rangeInfo": {
+      "Effect Height": [
+        "2",
+        "2"
+      ]
+    },
+    "rangeImage": "unit-eh-2-2"
+  },
+  {
     "name": "Target Weakness",
     "type": "Trait",
     "desc": "Deals 35% more DMG when attacking an enemy with a [debuff]."
+  },
+  {
+    "name": "Taste of Blood",
+    "type": "Skill",
+    "desc": "(Support) [Instant] Garcia recovers 30% HP, dispels 3 [Debuffs] on herself, and gains [Potential Burst], lasting for 1 turn.",
+    "rangeTags": [
+      "Unit"
+    ],
+    "cost": 1,
+    "cooldown": 4,
+    "rangeImage": "unit"
   },
   {
     "name": "Tearing Whirlwind",
@@ -3498,6 +4590,27 @@
     "rangeImage": "unit-r-1-1-hr-2-2"
   },
   {
+    "name": "Tropical Cyclone",
+    "type": "Skill",
+    "desc": "(Physical DMG) Rawiyah deals 140% DMG. For each [Debuff] the target has, DMG is increased by 10%, up to 50%, after which this skill switches to [Gale Breach].",
+    "rangeTags": [
+      "Melee",
+      "Unit"
+    ],
+    "cost": 2,
+    "rangeInfo": {
+      "Range": [
+        "1",
+        "1"
+      ],
+      "Height Range": [
+        "2",
+        "2"
+      ]
+    },
+    "rangeImage": "melee-unit-r-1-1-hr-2-2"
+  },
+  {
     "name": "Try This!",
     "type": "Skill",
     "desc": "(Healing) Heals other allies within 3 tiles around the character, restoring 10% HP and 2 NRG.",
@@ -3536,6 +4649,11 @@
     "name": "Volunteer",
     "type": "Trait",
     "desc": "[AoE DMG] taken is decreased by 20%. If other allies within 6 tiles around the character are [Dying], increases Movement by 2 tiles and SPD by 150. At the start of the turn, the CD of all skills is decreased by 1 turn."
+  },
+  {
+    "name": "Vow of Justice",
+    "type": "Skill",
+    "desc": "(Leader's Aura) For all \"The Union\" allies in battle, ATK is increased by 10%, DEF is increased by 20%. When performing an active attack, DMG is increased by 12%. When being Struck Back, DMG taken is decreased by 24%."
   },
   {
     "name": "Wall of Flame",
@@ -3639,7 +4757,7 @@
   {
     "name": "Wild Howl",
     "type": "Skill",
-    "desc": "(Piercing DMG) Alexei deals DMG equal to 40% of his M.ATK and inflicts [{-}Move II) and [{-}ATK III] to all enemies within a 3-tile radius of him, lasting for 2 turns.",
+    "desc": "(Piercing DMG) Alexei deals DMG equal to 40% of his M.ATK and inflicts [{-}Move II] and [{-}ATK III] to all enemies within a 3-tile radius of him, lasting for 2 turns.",
     "rangeTags": [
       "AoE",
       "Ground"
@@ -3659,6 +4777,36 @@
     "type": "Skill",
     "desc": "(Passive) If the character is [Dying] at the start of the turn, recovers 50% HP and 2 NRG. Effect CD: 2 turns.",
     "cooldown": 2
+  },
+  {
+    "name": "Windwalking",
+    "type": "Skill",
+    "desc": "(Passive) Increases Crit DMG by 10%. The maximum range of [ranged skills] increases by 1 tile."
+  },
+  {
+    "name": "Wine Barrel Casting",
+    "type": "Skill",
+    "desc": "(Physical DMG) [Instant] Edda deals 20% DMG to all enemies within 1 tile of the target and changes the tiles into [Liquor].",
+    "rangeTags": [
+      "AoE",
+      "Ground"
+    ],
+    "cooldown": 4,
+    "rangeInfo": {
+      "Range": [
+        "2",
+        "4"
+      ],
+      "Height Range": [
+        "8",
+        "6"
+      ],
+      "Effect Height": [
+        "2",
+        "2"
+      ]
+    },
+    "rangeImage": "aoe-ground-r-2-4-hr-8-6-eh-2-2"
   },
   {
     "name": "Wipe Out",

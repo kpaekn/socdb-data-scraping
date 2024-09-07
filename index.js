@@ -11,7 +11,7 @@ if (!fs.existsSync('out/range')) {
 }
 
 // start(1, `in/battle/Screenshot_20240903-165456.png`).then(console.log);
-// start(2, `in/tree/Screenshot_20240903-195813.png`).then(console.log);
+// start(2, `in/tree/Screenshot_20240906-120928.png`).then(console.log);
 // start(3, `in/trait/Screenshot_20240903-090639.png`).then(console.log);
 
 doBatch();
@@ -133,7 +133,7 @@ async function start(typ, file) {
       await copyAndConvert(`tmp/${id}/range-image.png`, `out/range/${result.rangeImage}.webp`)
     }
 
-    await copyAndConvert(`tmp/${id}/icon.png`, `out/skill/${slug(name)}.webp`)
+    await copyAndConvert(`tmp/${id}/icon.png`, `out/skill/${slug(result.name)}.webp`)
 
     return result;
   });
@@ -144,7 +144,7 @@ function trim(str) {
 }
 
 function slug(str) {
-  return str.toLowerCase().replaceAll(/['"!\(\),]/g, '').replaceAll(/[\s-]+/g, '-');
+  return str.toLowerCase().replaceAll(/['"!\(\),.]/g, '').replaceAll(/[\s-]+/g, '-');
 }
 
 function replaceNewLine(str) {
@@ -226,20 +226,28 @@ function fixType(str) {
 }
 
 function fixBuffs(str) {
+  var rep = {
+    '[AATK': '[{+}ATK',
+    '[ 2A ': '[{+}',
+    '[ /\\ ': '[{+}',
+    '111]': 'III]',
+    '11]': 'II]',
+    '1]': 'I]',
+    'forall': 'for all',
+    'DMGand': 'DMG and',
+    'taroet': 'target',
+  };
+  for (const match in rep) {
+    str = str.replaceAll(match, rep[match]);
+  }
+
   return str
     .replaceAll(/\[\s*Z*A+\s+/g, '[{+}')
-    .replaceAll('[AATK', '[{+}ATK')
     .replaceAll(/\[\s*V+\s+/g, '[{-}')
     .replaceAll(/\[\s*¥+\s+/g, '[{-}')
     .replaceAll(/\[\s*7+\s+/g, '[{-}')
     .replaceAll(/\[\s*©+\s+/g, '[{x}')
-    .replaceAll('111]', 'III]')
-    .replaceAll('11]', 'II]')
-    .replaceAll('1]', 'I]')
-    .replaceAll('ATKII', 'ATK II')
-
-    .replaceAll('forall', 'for all')
-    .replaceAll('DMGand', 'DMG and')
+    .replaceAll(/\s+/g, ' ')
 }
 
 async function copyAndConvert(src, dest) {

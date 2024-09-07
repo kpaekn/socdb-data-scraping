@@ -17,13 +17,13 @@ const regionsType1 = {
   'range-tag-2': { left: 1360, top: 847, width: 147, height: 37 },
 
   'range-1-label': { left: 1170, top: 885, width: 200, height: 41 },
-  'range-1-value': { left: 1390, top: 885, width: 130, height: 41 },
+  'range-1-value': { left: 1370, top: 885, width: 150, height: 41 },
 
   'range-2-label': { left: 1170, top: 931, width: 200, height: 41 },
-  'range-2-value': { left: 1390, top: 931, width: 130, height: 41 },
+  'range-2-value': { left: 1370, top: 931, width: 150, height: 41 },
 
   'range-3-label': { left: 1170, top: 977, width: 200, height: 41 },
-  'range-3-value': { left: 1390, top: 977, width: 130, height: 41 },
+  'range-3-value': { left: 1370, top: 977, width: 150, height: 41 },
 }
 
 const regionsType2 = {
@@ -41,13 +41,13 @@ const regionsType2 = {
   'range-tag-2': { left: 2080, top: 727, width: 116, height: 32 },
 
   'range-1-label': { left: 1870, top: 765, width: 200, height: 40 },
-  'range-1-value': { left: 2095, top: 765, width: 130, height: 40 },
+  'range-1-value': { left: 2070, top: 765, width: 155, height: 40 },
 
   'range-2-label': { left: 1870, top: 811, width: 200, height: 40 },
-  'range-2-value': { left: 2095, top: 811, width: 130, height: 40 },
+  'range-2-value': { left: 2070, top: 811, width: 155, height: 40 },
 
   'range-3-label': { left: 1870, top: 857, width: 200, height: 40 },
-  'range-3-value': { left: 2095, top: 857, width: 130, height: 40 },
+  'range-3-value': { left: 2070, top: 857, width: 155, height: 40 },
 };
 
 const regionsType3 = {

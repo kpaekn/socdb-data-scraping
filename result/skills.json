@@ -2934,7 +2934,7 @@
   {
     "name": "Legacy of Comrades",
     "type": "Skill",
-    "desc": "(Passive) When an ally in battle is defeated, recovers 30% HP for the character, and the character gains [ AATK II], [AP.DEF II], and [ /A M.DEF II] for 3 turns."
+    "desc": "(Passive) When an ally in battle is defeated, recovers 30% HP for the character, and the character gains [{+}ATK II], [{+}P.DEF II], and [{+}M.DEF II] for 3 turns."
   },
   {
     "name": "Light of Healing",
@@ -3156,7 +3156,7 @@
   {
     "name": "Mania Smash",
     "type": "Skill",
-    "desc": "(Physical DMG) Single-target attack. Deals 120% DMG. After attacking, gains 1.0% [Life Steal].",
+    "desc": "(Physical DMG) Single-target attack. Deals 120% DMG. After attacking, gains 40% [Life Steal].",
     "rangeTags": [
       "Melee",
       "Unit"
